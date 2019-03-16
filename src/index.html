@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>League og Legends</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="./data/lol/lol.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>WEBSITE TITLE</li>
+            <li>INICIO</li>
+            <li>CAMPEONES</li>
+            <li>CONTACTO</li>
+        </ul>
+    </nav>
+    <nav>
+        <input type="search"> 
+        <button id="btn">Buscar</button>
+        <label for="rol">Roles</label>
+        <select name="rol" id="rol" >
+             <option value="default"> </option>
+            <option value="fighter">Fighter</option>
+            <option value="mage">Mage</option>
+            <option value="tank">Tank</option>
+            <option value="assassin">Assassin</option>
+            <option value="marksman">Marksman</option>
+            <option value="support">Support</option>
+
+        </select>
+        <label for="sort">Ordenar</label>
+        <select name="sort" id="sort">
+            <option value="az" id="az">A-Z</option>
+            <option value="za" id="za">Z-A</option>
+            <option value="mp" id="mp">Maná(MP)</option>
+        </select>
+    </nav>
+    <main>
+        <header>CAMPEONES</header>
+        <div id="champions"></div>
+    </main>
+    <script src="lol.js"></script>
+</body>
 </html>
