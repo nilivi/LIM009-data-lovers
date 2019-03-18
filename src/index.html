@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li>WEBSITE TITLE</li>
-            <li>INICIO</li>
-            <li>CAMPEONES</li>
-            <li>CONTACTO</li>
-        </ul>
-    </nav>
-    <nav>
-        <input type="search"> 
-        <button id="btn">Buscar</button>
-        <label for="rol">Roles</label>
-        <select name="rol" id="rol" >
-             <option value="default"> </option>
-            <option value="fighter">Fighter</option>
-            <option value="mage">Mage</option>
-            <option value="tank">Tank</option>
-            <option value="assassin">Assassin</option>
-            <option value="marksman">Marksman</option>
-            <option value="support">Support</option>
 
-        </select>
-        <label for="sort">Ordenar</label>
-        <select name="sort" id="sort">
-            <option value="az" id="az">A-Z</option>
-            <option value="za" id="za">Z-A</option>
-            <option value="mp" id="mp">Maná(MP)</option>
-        </select>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header row">
+                <a class="navbar-brand" href="#">WEBSITE TITLE</a>
+            </div>
+            <ul class="nav navbar-nav col-xs-12 col-sm-6 col-md-4">
+                <li class="active"><a href="#">INICIO</a></li>
+                <li><a href="#">CAMPEONES</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar"> <br>
+        <div class="container">
+            <div class="row three-col">
+                <div class="col-xs-12 col-lg-4">
+                    <input type="search">
+                    <button id="btn">Buscar</button>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <label class="function" for="rol">Roles</label>
+                    <select name="rol" id="rol">
+                        <option value="default"> </option>
+                        <option value="fighter">Fighter</option>
+                        <option value="mage">Mage</option>
+                        <option value="tank">Tank</option>
+                        <option value="assassin">Assassin</option>
+                        <option value="marksman">Marksman</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <label class="function" for="sort">Ordenar</label>
+                    <select name="sort" id="sort">
+                        <option value="az" id="az">A-Z</option>
+                        <option value="za" id="za">Z-A</option>
+                        <option value="mp" id="mp">Maná(MP)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </nav>
     <main>
-        <header>CAMPEONES</header>
+        <header class="title">CAMPEONES</header>
         <div id="champions"></div>
     </main>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
-    <script src="main.js"></script></body>
+    <script src="main.js"></script>
+</body>
+
 </html>
