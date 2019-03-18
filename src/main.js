@@ -4,49 +4,36 @@ const championsList = document.getElementById('champions');
 const select = document.getElementById('rol')
 const sort = document.getElementById('sort')
 
-// const rol = select.value
 
 // Llamando a los nombres de cada campeón
 const lista = Object.entries(LOL.data)
 
-/*
-const abc = lista.map(function(campeon){
-    const abcd = campeon[0]+ "<br>" ;
-    return abcd
-})
-abc.sort()
-abc.reverse()
-const abcd = abc.join("")
-championsList.innerHTML= abcd
-*/
+
 sort.addEventListener('change', function selectSort(){
     let textoOrden = ""
     if(sort.value == 'az'){
-        const abc = lista.map(function(campeon){
-           return campeon[0]+ "<br>" ;
-
+        const championName = lista.map(function(campeon){
+            return '<img src="'+ campeon[1].img +'">' + campeon[0] +  "<br>";
         })
-        abc.sort()
-        // abc.reverse()
-        textoOrden = abc.join("")
-        console.log(abc)
+        championName.sort()
+        textoOrden = championName.join("")
     } else if(sort.value == 'za'){
-        const abc = lista.map(function(campeon){
-           return campeon[0]+ "<br>" ;
-
+        const championName = lista.map(function(campeon){
+            return '<img src="'+ campeon[1].img +'">' + campeon[0] +  "<br>";
         })
-        abc.sort()
-        abc.reverse()
-        textoOrden = abc.join("")
-        console.log(abc)
+        championName.sort()
+        championName.reverse()
+        textoOrden = championName.join("")
     }
-
     championsList.innerHTML = textoOrden
 })
 
 
 
-select.addEventListener('change', function selectRoles() {
+select.addEventListener('change', selectRoles)
+
+
+function selectRoles() {
     let textoFiltrado = ""
     if (select.value == 'tank') {
         lista.map(function (campeon) {
@@ -89,11 +76,6 @@ select.addEventListener('change', function selectRoles() {
 
     championsList.innerHTML = textoFiltrado
 }
-)
-
-
-
-
 
 
 
