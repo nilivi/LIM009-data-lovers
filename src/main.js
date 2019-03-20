@@ -10,6 +10,7 @@ const lista = Object.entries(LOL.data)
 //crendo array de las img
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 sort.addEventListener('change', function selectSort() {
     let textoOrden = ""
     if (sort.value == 'az') {
@@ -31,6 +32,10 @@ sort.addEventListener('change', function selectSort() {
 const images = lista.map((campeon)=>{
     return '<img src="'+ campeon[1].img +'">'
 >>>>>>> 6fd4f9ce417c288f050d1fa70fc1ece96410fbc1
+=======
+const images = lista.map((campeon)=>{
+    return '<img src="'+ campeon[1].img +'">'
+>>>>>>> 3b589acd9b1d511f3b28972647d88f897f08d358
 })
  images.reverse()
 //creando array de nombres de campeones
