@@ -10,33 +10,41 @@ window.lol = {
       }
       return textoFiltrado
   },
-  sort: (sortValue, arr) => {
+  sort: (ordenCampeones, arr) => {
+    const nuevoarray = arr.map(function(objCampeon){
+      return objCampeon
+    })
+    if (ordenCampeones == 'az') {
 
-    for (let i = 0; i < images.length; i++) {
-      const content = {Image: images[i], Name: names[i]};
-      championsCards.push(content)
-    }
-    return championsCards.sort();
+      nuevoarray.sort(function (a, b) {
+        if (a.Name > b.Name) {
+          return 1;
+        }
+        if (a.Name < b.Name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      })
+     
+    } else if (ordenCampeones == 'za'){
+      nuevoarray.sort(function (a, b) {
+        if (a.Name > b.Name) {
+          return 1;
+        }
+        if (a.Name < b.Name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      })
+      nuevoarray.reverse()
     
-    championsList.innerHTML=""
-    for (let i = 0; i < championsCards.length; i++) {
-        const card = document.createElement('div');
-        const championName = document.createElement('div')
-        const championImg = document.createElement('div')
-        card.className = 'card'
-        championName.className = 'championName'
-        championImg.className = 'championImg';
-        
-        // championsCards.sort()
-       
+    } else if (ordenCampeones == 'mp'){      
+      nuevoarray.sort()
+      console.log('hasfsafsaa')
 
-        championName.innerHTML = championsCards[i].Name
-        championImg.innerHTML = championsCards[i].Image
-
-        card.appendChild(championName)
-        card.appendChild(championImg)
-        
-        championsList.appendChild(card)
     }
+    return nuevoarray
   }
 }
