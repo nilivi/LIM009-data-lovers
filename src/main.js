@@ -8,15 +8,16 @@ const sort = document.getElementById('sort')
 const lista = Object.entries(LOL.data)
 
 //crendo array de las img
-s
+
 const images = lista.map((campeon)=>{
     return '<img src="'+ campeon[1].img +'">'
 })
-
+ images.reverse()
 //creando array de nombres de campeones
 const names = lista.map((campeon)=>{
-    return campeon[0]
+    return campeon[1].name
 })
+names.reverse()
 championsCards = []
 
 //objs de img y nombre para c/card
@@ -25,13 +26,13 @@ for (let i = 0; i < images.length; i++) {
     const content = {Image: images[i], Name: names[i]};
     championsCards.push(content)
 }
-return championsCards
+return championsCards.sort()
 }
 
 //creamos los cards
-function cards(){
+function cards(arr){
     championsList.innerHTML=""
-    for (let i = 0; i < championsCards.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         const card = document.createElement('div');
         const championName = document.createElement('div')
         const championImg = document.createElement('div')
@@ -39,8 +40,10 @@ function cards(){
         championName.className = 'championName'
         championImg.className = 'championImg';
         
-        championName.innerHTML = championsCards[i].Name
-        championImg.innerHTML = championsCards[i].Image
+        // championsCards.sort()
+       
+        championName.innerHTML = arr[i].Name
+        championImg.innerHTML = arr[i].Image
 
         card.appendChild(championName)
         card.appendChild(championImg)
@@ -48,14 +51,15 @@ function cards(){
         championsList.appendChild(card)
     }
 }
+console.log(championsList)
 
  window.onload = ()=>{
         championsCards = inicio();
-        cards();
+        cards(championsCards);
  }
 
 sort.addEventListener('change', function selectSort(){
-     championsList.innerHTML = lol.sort(sort.value, totalList);
+
 })
 
 select.addEventListener('change', ()=>{

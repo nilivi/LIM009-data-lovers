@@ -10,16 +10,33 @@ window.lol = {
       }
       return textoFiltrado
   },
-  sort: (sortValue, orderArr) => {
-      let textoOrden = ""
-      if (sortValue == 'az') {
-          orderArr.sort()
-          textoOrden = orderArr.join("")
-      } else if (sortValue == 'za') {
-          orderArr.sort()
-          orderArr.reverse()
-          textoOrden = orderArr.join("")
-      }
-      return textoOrden
+  sort: (sortValue, arr) => {
+
+    for (let i = 0; i < images.length; i++) {
+      const content = {Image: images[i], Name: names[i]};
+      championsCards.push(content)
+    }
+    return championsCards.sort();
+    
+    championsList.innerHTML=""
+    for (let i = 0; i < championsCards.length; i++) {
+        const card = document.createElement('div');
+        const championName = document.createElement('div')
+        const championImg = document.createElement('div')
+        card.className = 'card'
+        championName.className = 'championName'
+        championImg.className = 'championImg';
+        
+        // championsCards.sort()
+       
+
+        championName.innerHTML = championsCards[i].Name
+        championImg.innerHTML = championsCards[i].Image
+
+        card.appendChild(championName)
+        card.appendChild(championImg)
+        
+        championsList.appendChild(card)
+    }
   }
 }
