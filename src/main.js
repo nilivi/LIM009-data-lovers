@@ -9,17 +9,17 @@ const sort = document.getElementById('sort')
 const lista = Object.entries(LOL.data)
 
 
-sort.addEventListener('change', function selectSort(){
+sort.addEventListener('change', function selectSort() {
     let textoOrden = ""
-    if(sort.value == 'az'){
-        const championName = lista.map(function(campeon){
-            return '<img src="'+ campeon[1].img +'">' + campeon[0] +  "<br>";
+    if (sort.value == 'az') {
+        const championName = lista.map(function (campeon) {
+            return '<img src="' + campeon[1].img + '">' + campeon[0] + "<br>";
         })
         championName.sort()
         textoOrden = championName.join("")
-    } else if(sort.value == 'za'){
-        const championName = lista.map(function(campeon){
-            return '<img src="'+ campeon[1].img +'">' + campeon[0] +  "<br>";
+    } else if (sort.value == 'za') {
+        const championName = lista.map(function (campeon) {
+            return '<img src="' + campeon[1].img + '">' + campeon[0] + "<br>";
         })
         championName.sort()
         championName.reverse()
