@@ -1,35 +1,34 @@
-/* Manejo del DOM */
-const championsList = document.getElementById('champions');
-const select = document.getElementById('rol')
-const sort = document.getElementById('sort')
-
-
 // Llamando a los nombres de cada campeón
-const lista = Object.entries(LOL.data)
+const lista = Object.entries(LOL.data);
+const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(lista);
+
+/* Manejo del DOM */
+
+const select = document.getElementById('rol');
+const sort = document.getElementById('sort');
 
 
-const images = lista.map((campeon)=>{
-    return '<img src="'+ campeon[1].img +'">'
-})
-
-const names = lista.map((campeon)=>{
-    return campeon[1].name
-})
-
-championsCards = []
-
-//objs de img y nombre para c/card
-function inicio(){
-for (let i = 0; i < images.length; i++) {
-    const content = {Image: images[i], Name: names[i]};
-    championsCards.push(content)
+const printCardsOfChampions = (arrChampions) => {
+    const championsListElement= document.getElementById('champions');
+    let string = '';
+    arrChampions.forEach((obj)=>{
+        string += `
+        <div class="card">
+          <div class="championName">${obj.name}</div>
+          </div class="championImg"><img src=${obj.imagen} alt=${obj.name}/></div>
+        </div>
+        `
+    });
+    championsListElement.innerHTML = string;
 }
-return championsCards
-}
 
-//creamos los cards
-function cards(arrCampeones){
-    championsList.innerHTML=""
+
+
+
+
+//creamos los cards para cada champion
+/*const printCardsOfChampions =  (arrCampeones) =>{
+    championsListElement.innerHTML=""
     for (let i = 0; i < arrCampeones.length; i++) {
         const card = document.createElement('div');
         const championName = document.createElement('div')
@@ -46,12 +45,13 @@ function cards(arrCampeones){
         card.appendChild(championName)
         card.appendChild(championImg)
         
-        championsList.appendChild(card)
+        championsListElement.appendChild(card)
     }
-}
+}*/
  window.onload = ()=>{
-        championsCards = inicio();
-        cards(championsCards);
+    printCardsOfChampions(arrNameAndImageOfChampions);
+       // championsCards = inicio();
+        //cards(championsCards);
  }
 
 sort.addEventListener('change', function selectSort(){
@@ -73,4 +73,28 @@ const bcd = lista.map(function(campeon){
     return campeon[1].info.attack ;
 })
 championsList.innerHTML= bcd
+*/
+
+
+
+//const getNameAndImageOfChampion = champios => champios.map(obj =>( {imagen:obj[1].img, name: obj[1].name}))
+/*console.log(getNameAndImageOfChampion(lista))
+const images = lista.map((campeon)=>{
+    return '<img src="'+ campeon[1].img +'">'
+})
+const names = lista.map((campeon)=>{
+    return campeon[1].name
+})
+*/
+
+/*championsCards = []
+
+//objs de img y nombre para c/card
+function inicio(){
+for (let i = 0; i < images.length; i++) {
+    const content = {Image: images[i], Name: names[i]};
+    championsCards.push(content)
+}
+return championsCards
+}
 */
