@@ -1,14 +1,11 @@
 window.lol = {
+ getNameAndImageOfChampion : (champios) => {
+  return champios.map((obj)=>{
+   return {imagen: obj[1].img, name:obj[1].name}
+  }); 
+},
   filter: (rol) => {
-      let textoFiltrado = ""
-      if (select.value == rol) {
-          totalList.map(function (campeon) {
-              if (campeon[1].tags[0] == rol || campeon[1].tags[1] == rol) {
-                  textoFiltrado += '<img src="' + campeon[1].img + '">' + campeon[0] + "<br>";
-              }
-          })
-      }
-      return textoFiltrado
+      
   },
   sort: (ordenCampeones, arr) => {
     const nuevoarray = arr.map(function(objCampeon){
