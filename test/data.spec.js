@@ -4,13 +4,20 @@ require('../src/data');
 require('./data.spec.js');
 
 
-describe('example', () => {
+describe('lol', () => {
   
-  it('debería ser una función', () => {
-    assert.equal(typeof example, 'function');
+  it('debería ser un objeto', () => {
+    assert.equal(typeof lol, 'object');
   });
 
-  it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
-  });
+  describe('lol.getNameAndImageOfChampion', ()=>{
+    it('debería ser una función', () => {
+      assert.equal(typeof lol.getNameAndImageOfChampion, 'function');
+    });
+  })
+  describe('lol.getNameAndImageOfChampion', ()=>{
+    it('debería ser una función', () => {
+      assert.equal(typeof lol.getNameAndImageOfChampion, 'function');
+    });
+  })
 })

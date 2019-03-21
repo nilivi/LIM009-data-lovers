@@ -1,13 +1,11 @@
 window.lol = {
- getNameAndImageOfChampion : (champios) => {
-  return champios.map((obj)=>{
+ getNameAndImageOfChampion : (champions) => {
+  return champions.map((obj)=>{
    return {imagen: obj[1].img, name:obj[1].name}
   }); 
 },
-  filter: (rol) => {
-      
-  },
-  sort: (ordenCampeones, arr) => {
+  
+  sortChampionsCards: (ordenCampeones, arr) => {
     const nuevoarray = arr.map(function(objCampeon){
       return objCampeon
     })
@@ -37,11 +35,7 @@ window.lol = {
       })
       nuevoarray.reverse()
     
-    } else if (ordenCampeones == 'mp'){      
-      nuevoarray.sort()
-      console.log('hasfsafsaa')
-
-    }
+    } 
     return nuevoarray
   }
 }
