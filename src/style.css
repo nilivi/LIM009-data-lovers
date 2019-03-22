@@ -25,10 +25,31 @@ color: aliceblue;
 }
 .champions{
     font-weight: bold;
-    color: whitesmoke;
+    color: rgb(240, 235, 235);
     font-size: 25px;
 }
 .card{
   width: 20%;
   display: inline-block
+}
+.navbar-inverse{
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  background-color:#222;
+  border-color:#080808;
+  font-size: 30px;
+  color:whitesmoke;
+}
+.navbar-inverse li{
+  /* text-decoration: none; */
+  display: block;
+  padding: 0.5em;
+  color: white;
+}
+.navbar a{
+  color: white;
+  text-decoration: none;
+
 }

@@ -4,7 +4,7 @@ const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(lista);
 
 /* Manejo del DOM */
 
-const select = document.getElementById('rol');
+//const select = document.getElementById('rol');
 const sort = document.getElementById('sort');
 
 
@@ -55,16 +55,9 @@ const printCardsOfChampions = (arrChampions) => {
  }
 
 sort.addEventListener('change', function selectSort(){
-const nuevosCampeones = lol.sort(sort.value, championsCards)
-cards(nuevosCampeones)
+const newChampionsArr = lol.sortChampionsCards(sort.value, arrNameAndImageOfChampions)
+printCardsOfChampions(newChampionsArr)
 })
-
-select.addEventListener('change', ()=>{
-    championsList.innerHTML = lol.filter(select.value); 
-})
-
-
-
 
 
 /*
