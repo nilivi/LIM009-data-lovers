@@ -1,41 +1,43 @@
 // Llamando a los nombres de cada campeón
-const lista = Object.entries(LOL.data);
-const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(lista);
+const listOfChampions = Object.entries(LOL.data);
+const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
 
 const selectRoles = document.getElementById('rol');
-const sort = document.getElementById('sort');
+const sortChampions = document.getElementById('sort');
 
 const printCardsOfChampions = (arrChampions) => {
-    const championsListElement = document.getElementById('champions');
-    let string = '';
-    arrChampions.forEach((obj) => {
-        string += `
+
+  const championsListElement = document.getElementById('champions');
+  let string = '';
+  arrChampions.forEach((obj) => {
+    string += `
         <div class="card">
           <div class="championName">${obj.name}</div>
           </div class="championImg"><img src=${obj.image} alt=${obj.name}/></div>
         </div>
         `
-    });
-    championsListElement.innerHTML = string;
+  });
+  championsListElement.innerHTML = string;
 }
 
 window.onload = () => {
-    printCardsOfChampions(arrNameAndImageOfChampions);
+  printCardsOfChampions(arrNameAndImageOfChampions);
 }
 
-let newChampionsArr = []
-selectRoles.addEventListener('change', funcionFiltro)
-function funcionFiltro () {
+//ARROW FUNCTIONS
+
+selectRoles.addEventListener('change', funcFilterAndSort)
+sortChampions.addEventListener('change', funcFilterAndSort)
+
+
+function funcFilterAndSort (){
+  let newChampionsArr = arrNameAndImageOfChampions
+  if (selectRoles.value !== "default") {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
-    printCardsOfChampions(newChampionsArr)
+  }
+  newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
+  printCardsOfChampions(newChampionsArr)
 }
-
-
-sort.addEventListener('change', funcionOrden)
-function funcionOrden(){
-    newChampionsArr = lol.sortChampionsCards(sort.value,arrNameAndImageOfChampions)
-    printCardsOfChampions(newChampionsArr)
-};
 
 
 
@@ -83,15 +85,15 @@ return championsCards
         card.className = 'card'
         championName.className = 'championName'
         championImg.className = 'championImg';
-        
+
         // championsCards.sort()
-       
+
         championName.innerHTML = arrCampeones[i].Name
         championImg.innerHTML = arrCampeones[i].Image
 
         card.appendChild(championName)
         card.appendChild(championImg)
-        
+
         championsListElement.appendChild(card)
     }
 }*/
