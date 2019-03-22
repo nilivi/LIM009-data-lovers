@@ -23,18 +23,19 @@ window.onload = () => {
     printCardsOfChampions(arrNameAndImageOfChampions);
 }
 
-sort.addEventListener('change', funcionOrden)
-function funcionOrden(){
-    const newChampionsArr = lol.sortChampionsCards(sort.value,arrNameAndImageOfChampions)
-    printCardsOfChampions(newChampionsArr)
-};
-
+let newChampionsArr = []
 selectRoles.addEventListener('change', funcionFiltro)
 function funcionFiltro () {
-    const newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
+    newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
     printCardsOfChampions(newChampionsArr)
 }
 
+
+sort.addEventListener('change', funcionOrden)
+function funcionOrden(){
+    newChampionsArr = lol.sortChampionsCards(sort.value,arrNameAndImageOfChampions)
+    printCardsOfChampions(newChampionsArr)
+};
 
 
 
