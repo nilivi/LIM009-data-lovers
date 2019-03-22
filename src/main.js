@@ -2,62 +2,42 @@
 const lista = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(lista);
 
-/* Manejo del DOM */
-
-//const select = document.getElementById('rol');
+const selectRoles = document.getElementById('rol');
 const sort = document.getElementById('sort');
 
-
 const printCardsOfChampions = (arrChampions) => {
-    const championsListElement= document.getElementById('champions');
+    const championsListElement = document.getElementById('champions');
     let string = '';
-    arrChampions.forEach((obj)=>{
+    arrChampions.forEach((obj) => {
         string += `
         <div class="card">
           <div class="championName">${obj.name}</div>
-          </div class="championImg"><img src=${obj.imagen} alt=${obj.name}/></div>
+          </div class="championImg"><img src=${obj.image} alt=${obj.name}/></div>
         </div>
         `
     });
     championsListElement.innerHTML = string;
 }
 
-
-
-
-
-//creamos los cards para cada champion
-/*const printCardsOfChampions =  (arrCampeones) =>{
-    championsListElement.innerHTML=""
-    for (let i = 0; i < arrCampeones.length; i++) {
-        const card = document.createElement('div');
-        const championName = document.createElement('div')
-        const championImg = document.createElement('div')
-        card.className = 'card'
-        championName.className = 'championName'
-        championImg.className = 'championImg';
-        
-        // championsCards.sort()
-       
-        championName.innerHTML = arrCampeones[i].Name
-        championImg.innerHTML = arrCampeones[i].Image
-
-        card.appendChild(championName)
-        card.appendChild(championImg)
-        
-        championsListElement.appendChild(card)
-    }
-}*/
- window.onload = ()=>{
+window.onload = () => {
     printCardsOfChampions(arrNameAndImageOfChampions);
-       // championsCards = inicio();
-        //cards(championsCards);
- }
+}
 
-sort.addEventListener('change', function selectSort(){
-const newChampionsArr = lol.sortChampionsCards(sort.value, arrNameAndImageOfChampions)
-printCardsOfChampions(newChampionsArr)
-})
+sort.addEventListener('change', funcionOrden)
+function funcionOrden(){
+    const newChampionsArr = lol.sortChampionsCards(sort.value,arrNameAndImageOfChampions)
+    printCardsOfChampions(newChampionsArr)
+};
+
+selectRoles.addEventListener('change', funcionFiltro)
+function funcionFiltro () {
+    const newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
+    printCardsOfChampions(newChampionsArr)
+}
+
+
+
+
 
 
 /*
@@ -91,3 +71,26 @@ for (let i = 0; i < images.length; i++) {
 return championsCards
 }
 */
+
+//creamos los cards para cada champion
+/*const printCardsOfChampions =  (arrCampeones) =>{
+    championsListElement.innerHTML=""
+    for (let i = 0; i < arrCampeones.length; i++) {
+        const card = document.createElement('div');
+        const championName = document.createElement('div')
+        const championImg = document.createElement('div')
+        card.className = 'card'
+        championName.className = 'championName'
+        championImg.className = 'championImg';
+        
+        // championsCards.sort()
+       
+        championName.innerHTML = arrCampeones[i].Name
+        championImg.innerHTML = arrCampeones[i].Image
+
+        card.appendChild(championName)
+        card.appendChild(championImg)
+        
+        championsListElement.appendChild(card)
+    }
+}*/

@@ -12,44 +12,69 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse container-fluid">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+    <nav class="navbar container-fluid">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
-    <nav class="navbar"> <br>
-        <div class="container">
+    <section class="total-screen center-content">
+        <img src="https://bit.ly/2FseCUF" alt="Logo League of Legends">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam repellendus nisi, provident
+            pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum culpa
+            saepe?</p>
+        <button>Descubre a tus campeones</button>
+    </section>
+    <section class="total-screen">
+        <header></header>
+        <iframe src="https://www.youtube.com/embed/WWa5uAzYDkQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </section>
+    <main class="total-screen">
+        <nav class="navbar navbar-inverse">
             <div class="row three-col">
                 <div class="col-xs-12 col-lg-4">
                     <input type="search">
                     <button id="btn">Buscar</button>
                 </div>
                 <div class="col-xs-12 col-lg-4">
-                    <label class="function" for="rol">Roles</label>
-                    <select name="rol" id="rol">
-                        <option value="default"> </option>
-                        <option value="fighter">Fighter</option>
-                        <option value="mage">Mage</option>
-                        <option value="tank">Tank</option>
-                        <option value="assassin">Assassin</option>
-                        <option value="marksman">Marksman</option>
-                        <option value="support">Support</option>
-                    </select>
-                </div>
-                <div class="col-xs-12 col-lg-4">
-                    <label class="function" for="sort">Ordenar</label>
-                    <select name="sort" id="sort">
-                        <option value="az" id="az">A-Z</option>
-                        <option value="za" id="za">Z-A</option>
-                        <option value="mp" id="mp">Maná(MP)</option>
-                    </select>
+                    <button>Ordenar y filtrar</button>
                 </div>
             </div>
-        </div>
-    </nav>
-    <main>
+        </nav>
         <header class="title">CAMPEONES</header>
+        <aside class = "aside">
+            <div class="col-xs-12 col-lg-4">
+                <label class="function" for="rol">Roles</label>
+                <select name="rol" id="rol">
+                    <option value="default"> </option>
+                    <option value="Fighter">Fighter</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Tank">Tank</option>
+                    <option value="Assassin">Assassin</option>
+                    <option value="Marksman">Marksman</option>
+                    <option value="Support">Support</option>
+                </select>
+                <!-- <form>
+                    <input type="radio" name="rol" id="Fighter">Fighter
+                    <input type="radio" name="rol" id="Mage">Mage
+                    <input type="radio" name="rol" id="Tank">Tank
+                    <input type="radio" name="rol" id="Assassin">Assassin
+                    <input type="radio" name="rol" id="Marksman">Marksman
+                    <input type="radio" name="rol" id="Support">Support
+                </form> -->
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <label class="function" for="sort">Ordenar</label>
+                <select name="sort" id="sort">
+                    <option value="az" id="az">A-Z</option>
+                    <option value="za" id="za">Z-A</option>
+                </select>
+            </div>
+        </aside>
         <div id="champions" class="champions"></div>
     </main>
     <script src="./data/lol/lol.js"></script>

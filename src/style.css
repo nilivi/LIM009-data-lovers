@@ -32,24 +32,41 @@ color: aliceblue;
   width: 20%;
   display: inline-block
 }
-.navbar-inverse{
+.navbar{
   width: 100%;
   justify-content: flex-end;
   display: flex;
   flex-flow: row wrap;
   background-color:#222;
   border-color:#080808;
-  font-size: 30px;
+  font-size: 25px;
   color:whitesmoke;
+  height: 55px;
+  position: fixed;
 }
-.navbar-inverse li{
-  /* text-decoration: none; */
-  display: block;
+.navbar-inverse{
+  background-color: black;
+  position: relative;
+
+}
+.navbar ul li{
+  display: inline-block;
   padding: 0.5em;
-  color: white;
 }
-.navbar a{
+ .navbar ul a{
   color: white;
   text-decoration: none;
+} 
+.total-screen{
+  height: calc(100vh - 55px);
+  align-items: center;
+  padding-top: 30%;
 
+}
+.aside{
+  float: left;
+  height:200px;
+  background-color:whitesmoke;
+  color:black;
+  position: static;
 }
