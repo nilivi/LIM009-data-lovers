@@ -52,20 +52,21 @@ color: aliceblue;
 .navbar ul li{
   display: inline-block;
   padding: 0.5em;
-}
- .navbar ul a{
   color: white;
   text-decoration: none;
-} 
+
+
+}
+ 
 .total-screen{
   height: calc(100vh - 55px);
   align-items: center;
-  padding-top: 30%;
+  padding-top: 20%;
 
 }
 .aside{
   float: left;
-  height:200px;
+  height:400px;
   background-color:whitesmoke;
   color:black;
   position: static;
