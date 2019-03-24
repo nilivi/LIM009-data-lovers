@@ -1,9 +1,37 @@
 // Llamando a los nombres de cada campeón
 const listOfChampions = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
-
 const selectRoles = document.getElementById('rol');
 const sortChampions = document.getElementById('sort');
+
+console.log(listOfChampions)
+const championsInfo = document.getElementById("champions-info")
+
+// const printMainInfo = (arrChamp) =>{
+  // let string = '';
+  // arrChamp.forEach((obj)=>{
+  // const name = document.getElementById(obj[1].id)
+  // name.addEventListener('click', ()=>{
+//   string += `
+//   <div class="card" id="">
+//     <div class="champion-name">asdsadad</div>
+//     </div class="champion-img">asdnsaldnalsdk</div>
+//   </div>
+//   `
+  // console.log(name)
+// })
+// })
+// championsInfo.innerHTML=string
+// }
+
+// printMainInfo(listOfChampions);
+
+const namesChamps = document.getElementsByName("champs").value
+console.log(namesChamps)
+// namesChamps.addEventListener('click', ()=>{
+//   console.log('hola')
+// })
+
 
 const printCardsOfChampions = (arrChampions) => {
 
@@ -11,9 +39,9 @@ const printCardsOfChampions = (arrChampions) => {
   let string = '';
   arrChampions.forEach((obj) => {
     string += `
-        <div class="card">
-          <div class="championName">${obj.name}</div>
-          </div class="championImg"><img src=${obj.image} alt=${obj.name}/></div>
+        <div class="card" id=${obj.id} name = "champs">
+          <div class="champion-name">${obj.name}</div>
+          <div class="champion-img"><img src=${obj.image} alt=${obj.name}/></div>
         </div>
         `
   });

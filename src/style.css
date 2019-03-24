@@ -3,6 +3,7 @@
     padding: 0%;
     text-align: center;
     box-sizing: border-box;
+    font-family: arial;
 }
 body{
   background: url(http://s1.picswalls.com/wallpapers/2015/11/21/league-of-legends-high-definition_111244104_289.jpg);
@@ -19,7 +20,6 @@ color: brown;
 .title{
 font-size: 50px; 
 text-align:center;
-font-style: italic;
 font-weight: bold;
 color: aliceblue;
 }
@@ -54,8 +54,6 @@ color: aliceblue;
   padding: 0.5em;
   color: white;
   text-decoration: none;
-
-
 }
  
 .total-screen{
@@ -70,4 +68,17 @@ color: aliceblue;
   background-color:whitesmoke;
   color:black;
   position: static;
+}
+.btn-nav{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn-nav:focus {outline:0;}
+.head-nav{
+align-items: flex-start;
+padding: 0.5em;
+
 }

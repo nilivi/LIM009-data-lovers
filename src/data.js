@@ -1,7 +1,7 @@
 window.lol = {
     getNameAndImageOfChampion: (champions) => {
         return champions.map((obj) => {
-            return { image: obj[1].img, name: obj[1].name, rol: obj[1].tags}
+            return { image: obj[1].img, name: obj[1].name, rol: obj[1].tags, id:obj[1].id }
         });
     },
     filterChampionsRoles: ( rol, arr ) => {
