@@ -10,6 +10,20 @@ const minHp = document.getElementById('hp-min');
 const maxHp = document.getElementById('hp-max');
 const minAd = document.getElementById('ad-min');
 const maxAd = document.getElementById('ad-max');
+
+const welcomePage= document.getElementById('welcome-pg');
+const tutPage= document.getElementById('tut-pg');
+const championsPage= document.getElementById('champions-pg');
+const btnInit = document.getElementById('btn-init');
+const btnTut = document.getElementById('btn-tut');
+
+btnInit.addEventListener('click', funcHideAndShow)
+btnTut.addEventListener('click', funcHideAndShow)
+
+function funcHideAndShow () {
+  welcomePage.classList.add('hide'),
+  championsPage.classList.remove('hide')
+}
 // const champs = document.getElementsByName('champs')
 // console.log(champs)
 // champs.addEventListener('click', ()=>{
@@ -53,12 +67,12 @@ const printCardsOfChampions = (arrChampions) => {
   let string = '';
   arrChampions.forEach((obj) => {
     string += `
-        <div class="card" id=${obj.id} name = "champs">
+        <section class="card" id=${obj.id} name = "champs">
+          <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
           <div class="champion-name">${obj.name}</div>
-          <div class="champion-img"><img src=${obj.image} alt=${obj.name}/></div>
           <div class="champion-mp"> MP: ${obj.mana}</div>
 
-        </div>
+        </section>
         `
   });
   championsListElement.innerHTML = string;
