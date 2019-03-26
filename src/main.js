@@ -3,31 +3,45 @@ const listOfChampions = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
 const selectRoles = document.getElementById('rol');
 const sortChampions = document.getElementById('sort');
+const championsInfo = document.getElementById("champions-info");
+const minNumber = document.getElementById('min-number');
+const maxNumber = document.getElementById('max-number');
+const minHp = document.getElementById('hp-min');
+const maxHp = document.getElementById('hp-max');
+const minAd = document.getElementById('ad-min');
+const maxAd = document.getElementById('ad-max');
+// const champs = document.getElementsByName('champs')
+// console.log(champs)
+// champs.addEventListener('click', ()=>{
+//   alert('hola')
+// })
 
-console.log(listOfChampions)
-const championsInfo = document.getElementById("champions-info")
 
-// const printMainInfo = (arrChamp) =>{
-  // let string = '';
-  // arrChamp.forEach((obj)=>{
-  // const name = document.getElementById(obj[1].id)
+maxNumber.addEventListener('keyup', funcFilterAndSort);
+minNumber.addEventListener('keyup', funcFilterAndSort);
+
+
+const printMainInfo = (arrChamp) =>{
+  let string = '';
+
+  arrChamp.forEach((obj)=>{
+    const name = document.getElementById(obj[1].id)
   // name.addEventListener('click', ()=>{
-//   string += `
-//   <div class="card" id="">
-//     <div class="champion-name">asdsadad</div>
-//     </div class="champion-img">asdnsaldnalsdk</div>
-//   </div>
-//   `
-  // console.log(name)
+  string += `
+  <div class="card" id="${obj[1].id}">
+    <div class="champion-name">asdsaALKFMALKFMLASFMdad</div>
+    </div class="champion-img">asdnsaldnalsdk</div>
+  </div>
+  `
+  championsInfo.innerHTML=string
+
 // })
-// })
-// championsInfo.innerHTML=string
-// }
+})
+}
 
 // printMainInfo(listOfChampions);
 
-const namesChamps = document.getElementsByName("champs").value
-console.log(namesChamps)
+//const namesChamps = document.getElementsByName("champs").value
 // namesChamps.addEventListener('click', ()=>{
 //   console.log('hola')
 // })
@@ -42,6 +56,8 @@ const printCardsOfChampions = (arrChampions) => {
         <div class="card" id=${obj.id} name = "champs">
           <div class="champion-name">${obj.name}</div>
           <div class="champion-img"><img src=${obj.image} alt=${obj.name}/></div>
+          <div class="champion-mp"> MP: ${obj.mana}</div>
+
         </div>
         `
   });
@@ -50,26 +66,40 @@ const printCardsOfChampions = (arrChampions) => {
 
 window.onload = () => {
   printCardsOfChampions(arrNameAndImageOfChampions);
-}
+  funcFilterAndSort()
+} 
+
 
 //ARROW FUNCTIONS
 
 selectRoles.addEventListener('change', funcFilterAndSort)
 sortChampions.addEventListener('change', funcFilterAndSort)
 
-
 function funcFilterAndSort (){
-  let newChampionsArr = arrNameAndImageOfChampions
+   let newChampionsArr = arrNameAndImageOfChampions
   if (selectRoles.value !== "default") {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
+    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
+    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
+    newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
+    printCardsOfChampions(newChampionsArr)
+    statOfChamps(newChampionsArr)
   }
   newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
+  newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
   printCardsOfChampions(newChampionsArr)
+  statOfChamps(newChampionsArr)
+console.log(Math.min.apply(null,lol.adOfChampions(newChampionsArr)));
+ 
 }
 
-
-
-
+function statOfChamps (arr){
+  minHp.innerHTML= Math.min.apply(null, lol.hpOfChampions(arr))
+  maxHp.innerHTML= Math.max.apply(null, lol.hpOfChampions(arr))
+  minAd.innerHTML= Math.min.apply(null, lol.adOfChampions(arr))
+  maxAd.innerHTML= Math.max.apply(null, lol.adOfChampions(arr))
+}
+console.log(maxHp)
 
 /*
 const bcd = lista.map(function(campeon){
