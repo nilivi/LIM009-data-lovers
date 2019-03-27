@@ -11,18 +11,29 @@ const maxHp = document.getElementById('hp-max');
 const minAd = document.getElementById('ad-min');
 const maxAd = document.getElementById('ad-max');
 
-const welcomePage= document.getElementById('welcome-pg');
-const tutPage= document.getElementById('tut-pg');
-const championsPage= document.getElementById('champions-pg');
+const welcomePage = document.getElementById('welcome-pg');
+const tutPage = document.getElementById('tut-pg');
+
+const championsPage = document.getElementById('champions-pg');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
+const btnSearch = document.getElementById('btn-search');
+const btnFilterSort = document.getElementById('btn-filter-sort');
+const asideStats = document.getElementById('aside');
 
 btnInit.addEventListener('click', funcHideAndShow)
 btnTut.addEventListener('click', funcHideAndShow)
 
-function funcHideAndShow () {
-  welcomePage.classList.add('hide'),
+function funcHideAndShow() {
+  welcomePage.classList.add('hide');
+  tutPage.classList.add('hide');
   championsPage.classList.remove('hide')
+}
+
+btnFilterSort.addEventListener('click', funcHideAside)
+
+function funcHideAside() {
+  asideStats.classList.toggle('hide')
 }
 // const champs = document.getElementsByName('champs')
 // console.log(champs)
@@ -31,26 +42,28 @@ function funcHideAndShow () {
 // })
 
 
+maxNumber.addEventListener('change', funcFilterAndSort);
 maxNumber.addEventListener('keyup', funcFilterAndSort);
+minNumber.addEventListener('change', funcFilterAndSort);
 minNumber.addEventListener('keyup', funcFilterAndSort);
 
 
-const printMainInfo = (arrChamp) =>{
+const printMainInfo = (arrChamp) => {
   let string = '';
 
-  arrChamp.forEach((obj)=>{
+  arrChamp.forEach((obj) => {
     const name = document.getElementById(obj[1].id)
-  // name.addEventListener('click', ()=>{
-  string += `
+    // name.addEventListener('click', ()=>{
+    string += `
   <div class="card" id="${obj[1].id}">
     <div class="champion-name">asdsaALKFMALKFMLASFMdad</div>
     </div class="champion-img">asdnsaldnalsdk</div>
   </div>
   `
-  championsInfo.innerHTML=string
+    championsInfo.innerHTML = string
 
-// })
-})
+    // })
+  })
 }
 
 // printMainInfo(listOfChampions);
@@ -69,9 +82,10 @@ const printCardsOfChampions = (arrChampions) => {
     string += `
         <section class="card" id=${obj.id} name = "champs">
           <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
+          <div class="name-card">
           <div class="champion-name">${obj.name}</div>
           <div class="champion-mp"> MP: ${obj.mana}</div>
-
+          </div>
         </section>
         `
   });
@@ -81,7 +95,7 @@ const printCardsOfChampions = (arrChampions) => {
 window.onload = () => {
   printCardsOfChampions(arrNameAndImageOfChampions);
   funcFilterAndSort()
-} 
+}
 
 
 //ARROW FUNCTIONS
@@ -89,8 +103,8 @@ window.onload = () => {
 selectRoles.addEventListener('change', funcFilterAndSort)
 sortChampions.addEventListener('change', funcFilterAndSort)
 
-function funcFilterAndSort (){
-   let newChampionsArr = arrNameAndImageOfChampions
+function funcFilterAndSort() {
+  let newChampionsArr = arrNameAndImageOfChampions
   if (selectRoles.value !== "default") {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
     newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
@@ -103,15 +117,15 @@ function funcFilterAndSort (){
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
   printCardsOfChampions(newChampionsArr)
   statOfChamps(newChampionsArr)
-console.log(Math.min.apply(null,lol.adOfChampions(newChampionsArr)));
- 
+  console.log(Math.min.apply(null, lol.adOfChampions(newChampionsArr)));
+
 }
 
-function statOfChamps (arr){
-  minHp.innerHTML= Math.min.apply(null, lol.hpOfChampions(arr))
-  maxHp.innerHTML= Math.max.apply(null, lol.hpOfChampions(arr))
-  minAd.innerHTML= Math.min.apply(null, lol.adOfChampions(arr))
-  maxAd.innerHTML= Math.max.apply(null, lol.adOfChampions(arr))
+function statOfChamps(arr) {
+  minHp.innerHTML = Math.min.apply(null, lol.hpOfChampions(arr))
+  maxHp.innerHTML = Math.max.apply(null, lol.hpOfChampions(arr))
+  minAd.innerHTML = Math.min.apply(null, lol.adOfChampions(arr))
+  maxAd.innerHTML = Math.max.apply(null, lol.adOfChampions(arr))
 }
 console.log(maxHp)
 
