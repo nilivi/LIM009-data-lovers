@@ -3,7 +3,7 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-
+//TESTEAR CON JEST
 describe('lol', () => {
   
   it('debería ser un objeto', () => {
