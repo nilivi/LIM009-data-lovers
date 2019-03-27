@@ -8,6 +8,8 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">  -->
     <!-- <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css" /> -->
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ewert|Quattrocento" rel="stylesheet">
+
 
 </head>
 
@@ -29,12 +31,14 @@
                 src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_ES/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/vid/hero-video.mp4"
                 type="video/mp4">
         </video>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam repellendus nisi, provident
-            pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum culpa
+        <p class="intro-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam
+            repellendus nisi, provident
+            pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum
+            culpa
             saepe?</p>
         <button class="btn-init" id="btn-init">Descubre a tus campeones</button>
     </section>
-    <section class="total-screen bg-pg" id="tut-pg">
+    <section class="total-screen bg-pg center-content" id="tut-pg">
         <header></header>
         <iframe src="https://www.youtube.com/embed/WWa5uAzYDkQ" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -53,47 +57,47 @@
             </div>
         </nav>
         <aside class="aside hide" id="aside">
-                <form>
-                    <div class="nav-area ">
-                        <label class="style-filter" for="rol">Roles</label>
-                        <select name="rol" id="rol">
-                            <option value="default"> </option>
-                            <option value="Fighter">Fighter</option>
-                            <option value="Mage">Mage</option>
-                            <option value="Tank">Tank</option>
-                            <option value="Assassin">Assassin</option>
-                            <option value="Marksman">Marksman</option>
-                            <option value="Support">Support</option>
-                        </select>
-                    </div>
-                    <div class="nav-area ">
-                        <label class="style-filter" for="sort">Ordenar</label>
-                        <select name="sort" id="sort">
-                            <option value="az" id="az">A-Z</option>
-                            <option value="za" id="za">Z-A</option>
-                        </select>
-                    </div>
-                    <div class="nav-area ">
-                        <label class="style-filter">Maná</label>
-                        <input type="number" class="number" id="min-number" value=0 step="10" min="0">
-                        <input type="number" class="number" id="max-number" value=500 step="10">
-                    </div>
-                    <div class="nav-area">
-                        <p class="stat-value"> HP min: <div id="hp-min"></div>
-                        </p>
-                        <p class="stat-value"> HP max: <div id="hp-max"></div>
-                        </p>
-                    </div>
-                    <div class="nav-area">
-                        <p class="stat-value"> AD min: <div id="ad-min"></div>
-                        </p>
-                        <p class="stat-value"> AD max: <div id="ad-max"></div>
-                        </p>
-                    </div>
-                </form>
-            </aside>
+            <form>
+                <div class="nav-area ">
+                    <label class="style-filter" for="rol">Roles</label>
+                    <select name="rol" id="rol">
+                        <option value="default"> </option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Mage">Mage</option>
+                        <option value="Tank">Tank</option>
+                        <option value="Assassin">Assassin</option>
+                        <option value="Marksman">Marksman</option>
+                        <option value="Support">Support</option>
+                    </select>
+                </div>
+                <div class="nav-area ">
+                    <label class="style-filter" for="sort">Ordenar</label>
+                    <select name="sort" id="sort">
+                        <option value="az" id="az">A-Z</option>
+                        <option value="za" id="za">Z-A</option>
+                    </select>
+                </div>
+                <div class="nav-area ">
+                    <label class="style-filter">Maná</label>
+                    <input type="number" class="number" id="min-number" value=0 step="10" min="0">
+                    <input type="number" class="number" id="max-number" value=500 step="10">
+                </div>
+                <div class="nav-area">
+                    <p class="stat-value"> HP min: <div id="hp-min"></div>
+                    </p>
+                    <p class="stat-value"> HP max: <div id="hp-max"></div>
+                    </p>
+                </div>
+                <div class="nav-area">
+                    <p class="stat-value"> AD min: <div id="ad-min"></div>
+                    </p>
+                    <p class="stat-value"> AD max: <div id="ad-max"></div>
+                    </p>
+                </div>
+            </form>
+        </aside>
         <header class="title">CAMPEONES</header>
-       
+
         <div id="champions" class="champions"></div>
         <div id="champions-info"></div>
     </main>
