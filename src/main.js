@@ -10,10 +10,8 @@ const minHp = document.getElementById('hp-min');
 const maxHp = document.getElementById('hp-max');
 const minAd = document.getElementById('ad-min');
 const maxAd = document.getElementById('ad-max');
-
 const welcomePage = document.getElementById('welcome-pg');
 const tutPage = document.getElementById('tut-pg');
-
 const championsPage = document.getElementById('champions-pg');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
@@ -35,29 +33,15 @@ btnFilterSort.addEventListener('click', funcHideAside)
 function funcHideAside() {
   asideStats.classList.toggle('hide')
 }
-// const champs = document.getElementsByName('champs')
-// console.log(champs)
-// champs.addEventListener('click', ()=>{
-//   alert('hola')
-// })
-
 
 maxNumber.addEventListener('change', funcFilterAndSort);
 maxNumber.addEventListener('keyup', funcFilterAndSort);
 minNumber.addEventListener('change', funcFilterAndSort);
 minNumber.addEventListener('keyup', funcFilterAndSort);
 
-
-
-//const namesChamps = document.getElementsByName("champs").value
-// namesChamps.addEventListener('click', ()=>{
-//   console.log('hola')
-// })
-
+const championsListElement = document.getElementById('champions');
 
 const printCardsOfChampions = (arrChampions) => {
-
-  const championsListElement = document.getElementById('champions');
   arrChampions.forEach((obj) => {
     const string = `
         <section class="card" id=${obj.id} name = "champs">
@@ -68,24 +52,52 @@ const printCardsOfChampions = (arrChampions) => {
           </div>
         </section>
         `
-        const div = document.createElement('div')
-        div.innerHTML=string
-        championsListElement.appendChild(div);
-        printMainInfo(div);
+    const div = document.createElement('div')
+    div.innerHTML = string
+    championsListElement.appendChild(div);
+    printMainInfo(div);
   });
 }
 
 const printMainInfo = (div) => {
 
- const printName = div.querySelector("[name='champs']")
- console.log(printName);
- printName.addEventListener('click', ()=>{
-  printName.getAttribute('id');
-  const string = `
-    <div class="champion-name">${printName.getAttribute('id')}</div>
-  `
-   champions.innerHTML = string
-})
+  const printName = div.querySelector("[name='champs']")
+  printName.addEventListener('click', () => {
+    const atribId = printName.getAttribute('id');
+    let string = ''
+    const arrPrintInfo = listOfChampions.filter((obj) => {
+      console.log(obj)
+      if (atribId == obj[1].id) {
+        string += `
+    <figure class="champ-img">
+    <img class="champion-img"src=${obj[1].splash} alt=${obj[1].name}>
+    </figure>
+    <section class="info-gnrl">
+    <div class="champ-name">${obj[1].name}</div>
+    <div class="champ-rol">Rol: ${obj[1].tags}</div>
+    <div class="champ-info">
+    <ul>
+    <il>"AD-attack:" ${obj[1].info.attack}</li>
+    <il>"AP-magic:" ${obj[1].info.magic}</li>
+    <il>"DEF-defense:" ${obj[1].info.defense}</li>
+    <il>"DIF-difficulty:" ${obj[1].info.difficulty}</li>
+    </ul>
+    </section>
+    <section class="info-stats">
+    <div class="champ-descrip">"Descripción: " ${obj[1].blurb}</div>
+    <h2 class="stat-title"> "Estadísticas" </h2>
+    <table class="table-stat">
+    <tr>
+    <th> 
+`
+        const divInfo = document.createElement('div')
+        divInfo.innerHTML = string
+        divInfo.className = "info-champions"
+        championsPage.appendChild(divInfo);
+      }
+    })
+    championsListElement.classList.add('hide')
+  })
 
 
 }
@@ -115,8 +127,6 @@ function funcFilterAndSort() {
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
   printCardsOfChampions(newChampionsArr)
   statOfChamps(newChampionsArr)
-  console.log(Math.min.apply(null, lol.adOfChampions(newChampionsArr)));
-
 }
 
 function statOfChamps(arr) {
@@ -125,7 +135,6 @@ function statOfChamps(arr) {
   minAd.innerHTML = Math.min.apply(null, lol.adOfChampions(arr))
   maxAd.innerHTML = Math.max.apply(null, lol.adOfChampions(arr))
 }
-console.log(maxHp)
 
 /*
 const bcd = lista.map(function(campeon){

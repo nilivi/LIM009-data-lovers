@@ -161,3 +161,10 @@ video {
   border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
   border-image-slice: 2;
 }
+.champ-img{
+width:30%;
+}
+.info-champions{
+  color: white;
+  font-size: 25px;
+}
