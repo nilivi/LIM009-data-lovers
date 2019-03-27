@@ -21,68 +21,79 @@
             <li><button class="btn-nav">Contact</button></li>
         </ul>
     </nav>
+
     <section class="total-screen center-content" id="welcome-pg">
         <img src="https://bit.ly/2FseCUF" alt="Logo League of Legends">
+        <video id="hero-vid" loop autoplay preload muted style="opacity: 1;">
+            <source
+                src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_ES/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/vid/hero-video.mp4"
+                type="video/mp4">
+        </video>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam repellendus nisi, provident
             pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum culpa
             saepe?</p>
         <button class="btn-init" id="btn-init">Descubre a tus campeones</button>
-        <section class="total-screen" id="tut-pg">
-            <header></header>
-            <iframe src="https://www.youtube.com/embed/WWa5uAzYDkQ" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <button class="btn-init" id="btn-tut">Descubre a tus campeones</button>
-        </section>
     </section>
-    
-    <main class="total-screen bg-main hide" id="champions-pg">
+    <section class="total-screen bg-pg" id="tut-pg">
+        <header></header>
+        <iframe src="https://www.youtube.com/embed/WWa5uAzYDkQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <button class="btn-init" id="btn-tut">Descubre a tus campeones</button>
+    </section>
+
+    <main class="total-screen hide bg-pg" id="champions-pg">
         <nav class="navbar navbar-inverse">
-            <div class="row three-col">
-                <div class="col-xs-12 col-lg-4">
-                    <input type="search">
-                    <button id="btn">Buscar</button>
-                </div>
-                <div class="col-xs-12 col-lg-4">
-                    <button>Ordenar y filtrar</button>
-                </div>
+            <div class="nav-stats">
+                <button id="btn-filter-sort" class="btn-champions">Ordenar y filtrar</button>
+            </div>
+            <div class="nav-stats">
+                <input type="search">
+                <button id="btn-search" class="btn-champions">Buscar</button>
             </div>
         </nav>
+        <aside class="aside hide" id="aside">
+                <form>
+                    <div class="nav-area ">
+                        <label class="style-filter" for="rol">Roles</label>
+                        <select name="rol" id="rol">
+                            <option value="default"> </option>
+                            <option value="Fighter">Fighter</option>
+                            <option value="Mage">Mage</option>
+                            <option value="Tank">Tank</option>
+                            <option value="Assassin">Assassin</option>
+                            <option value="Marksman">Marksman</option>
+                            <option value="Support">Support</option>
+                        </select>
+                    </div>
+                    <div class="nav-area ">
+                        <label class="style-filter" for="sort">Ordenar</label>
+                        <select name="sort" id="sort">
+                            <option value="az" id="az">A-Z</option>
+                            <option value="za" id="za">Z-A</option>
+                        </select>
+                    </div>
+                    <div class="nav-area ">
+                        <label class="style-filter">Maná</label>
+                        <input type="number" class="number" id="min-number" value=0 step="10" min="0">
+                        <input type="number" class="number" id="max-number" value=500 step="10">
+                    </div>
+                    <div class="nav-area">
+                        <p class="stat-value"> HP min: <div id="hp-min"></div>
+                        </p>
+                        <p class="stat-value"> HP max: <div id="hp-max"></div>
+                        </p>
+                    </div>
+                    <div class="nav-area">
+                        <p class="stat-value"> AD min: <div id="ad-min"></div>
+                        </p>
+                        <p class="stat-value"> AD max: <div id="ad-max"></div>
+                        </p>
+                    </div>
+                </form>
+            </aside>
         <header class="title">CAMPEONES</header>
-        <aside class = "aside">
-            <div class="nav-area function">
-                <label class="style-filter" for="rol">Roles</label>
-                <select name="rol" id="rol">
-                    <option value="default"> </option>
-                    <option value="Fighter">Fighter</option>
-                    <option value="Mage">Mage</option>
-                    <option value="Tank">Tank</option>
-                    <option value="Assassin">Assassin</option>
-                    <option value="Marksman">Marksman</option>
-                    <option value="Support">Support</option>
-                </select>
-            </div>
-            <div class="nav-area function">
-                <label class="style-filter" for="sort">Ordenar</label>
-                <select name="sort" id="sort">
-                    <option value="az" id="az">A-Z</option>
-                    <option value="za" id="za">Z-A</option>
-                </select>
-            </div>
-            <div class="nav-area function">
-                <label class="style-filter">Maná</label>
-                <input type="number" class="number" id="min-number" value=0 step="10">
-                <input type="number" class="number" id="max-number"  value=500 step="10">
-            </div>
-            <div class="nav-area">
-                <p class="stat-value"> HP min: <div id="hp-min"></div></p> 
-                <p class="stat-value"> HP max: <div id="hp-max"></div></p>
-            </div>
-            <div class="nav-area">
-                <p class="stat-value"> AD min: <div id="ad-min"></div></p>
-                <p class="stat-value"> AD max: <div id="ad-max"></div></p>
-            </div>
-        </aside>
+       
         <div id="champions" class="champions"></div>
         <div id="champions-info"></div>
     </main>

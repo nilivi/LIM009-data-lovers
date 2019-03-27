@@ -8,23 +8,16 @@
   .hide{
     display: none;
   }
-body{
+/* body{
   background: url(http://s1.picswalls.com/wallpapers/2015/11/21/league-of-legends-high-definition_111244104_289.jpg);
-  background-attachment: fixed;
-  background-position: center; 
-  background-size: cover;
-}
-.style-filter{
-font-size: 20px; 
-text-align:center;
-font-style: italic;
-color: brown;
-}
+
+} */
+
 .title{
 font-size: 50px; 
 text-align:center;
 font-weight: bold;
-color: aliceblue;
+color: whitesmoke;
 }
 .champions{
     font-weight: bold;
@@ -32,29 +25,41 @@ color: aliceblue;
     font-size: 25px;
     margin:0;
     padding:2%;
-    background-color: #080808;
     overflow: scroll;
     height: calc(75vh);
 }
+.name-card{
+  color: #937341;
+  background-color: #DADDD8;
+}
+.champion-name{
+font-size: 30px;
+}
+.champion-mp{
+  font-size: 15px;
+
+}
 .card{
-  width: 25%;
+  width: 30%;
   display: inline-block
 }
 .navbar{
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
   display: flex;
   flex-flow: row wrap;
   background-color:#222;
   border-color:#080808;
   font-size: 25px;
   color:whitesmoke;
-  height: 55px;
+  height: 65px;
   position: fixed;
 }
 .navbar-inverse{
   background-color: black;
   position: sticky;
+  height: 50px;
+  padding:0.5em;
 
 }
 .navbar ul li{
@@ -70,7 +75,8 @@ color: aliceblue;
   padding-top: 4%;
 }
 main{
-  overflow: hidden
+  overflow: hidden;
+  background-color: #23231A;
 
 }
 .nav-area{
@@ -80,11 +86,14 @@ main{
 }
 .aside{
   float: left;  
-  height: calc(75vh);
+  height: calc(100vh);
   width: 25%;
   padding:1%;
-  background-color:whitesmoke;
-  color:black;
+  background-color: #1C1C1C;
+  color:#DADDD8;
+  font-size: 20px; 
+text-align:center;
+font-style: italic;
   position: static;
 }
 .btn-nav{
@@ -94,18 +103,36 @@ main{
   font-size: 20px;
   cursor: pointer;
 }
+
 .btn-nav:focus {outline:0;}
 .head-nav{
-align-items: flex-start;
 padding: 0.5em;
-
 }
+
 .champion-img{
 width: 100%;
 }
-.bg-main{
-  background-color: rgb(41, 37, 37);
-}
+
 .number{
   width: 50px;
 }
+video{
+  position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: auto;
+ z-index: -10;
+ visibility: visible;
+ /* position: fixed; */
+
+}
+.center-content{
+padding: 10%;
+}
+.bg-pg{
+  background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
+  border-top: 8px solid transparent;
+  border-image: linear-gradient(to right,#836323 0,#c3a568 51%,#836323 100%);
+  border-image-slice: 1;
+ }
