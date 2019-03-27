@@ -48,25 +48,6 @@ minNumber.addEventListener('change', funcFilterAndSort);
 minNumber.addEventListener('keyup', funcFilterAndSort);
 
 
-const printMainInfo = (arrChamp) => {
-  let string = '';
-
-  arrChamp.forEach((obj) => {
-    const name = document.getElementById(obj[1].id)
-    // name.addEventListener('click', ()=>{
-    string += `
-  <div class="card" id="${obj[1].id}">
-    <div class="champion-name">asdsaALKFMALKFMLASFMdad</div>
-    </div class="champion-img">asdnsaldnalsdk</div>
-  </div>
-  `
-    championsInfo.innerHTML = string
-
-    // })
-  })
-}
-
-// printMainInfo(listOfChampions);
 
 //const namesChamps = document.getElementsByName("champs").value
 // namesChamps.addEventListener('click', ()=>{
@@ -77,9 +58,8 @@ const printMainInfo = (arrChamp) => {
 const printCardsOfChampions = (arrChampions) => {
 
   const championsListElement = document.getElementById('champions');
-  let string = '';
   arrChampions.forEach((obj) => {
-    string += `
+    const string = `
         <section class="card" id=${obj.id} name = "champs">
           <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
           <div class="name-card">
@@ -88,8 +68,26 @@ const printCardsOfChampions = (arrChampions) => {
           </div>
         </section>
         `
+        const div = document.createElement('div')
+        div.innerHTML=string
+        championsListElement.appendChild(div);
+        printMainInfo(div);
   });
-  championsListElement.innerHTML = string;
+}
+
+const printMainInfo = (div) => {
+
+ const printName = div.querySelector("[name='champs']")
+ console.log(printName);
+ printName.addEventListener('click', ()=>{
+  printName.getAttribute('id');
+  const string = `
+    <div class="champion-name">${printName.getAttribute('id')}</div>
+  `
+   champions.innerHTML = string
+})
+
+
 }
 
 window.onload = () => {
