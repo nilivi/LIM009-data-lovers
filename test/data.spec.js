@@ -1,4 +1,5 @@
 global.window = global;
+global.jestExpect = global.expect;
 global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
@@ -229,7 +230,7 @@ describe('lol', () => {
   });
   describe('lol.getNameAndImageOfChampion', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.getNameAndImageOfChampion, 'function');
+      expect(typeof lol.getNameAndImageOfChampion).toBe('function');
     });
     test('debería dar un array con objetos', () => {
       expect(lol.getNameAndImageOfChampion(prueba)).toEqual(
@@ -275,27 +276,27 @@ describe('lol', () => {
   })
   describe('lol.filterChampionsRoles', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.filterChampionsRoles, 'function');
+      expect(typeof lol.filterChampionsRoles).toBe('function');
     });
   })
   describe('lol.filterChampionsMana', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.filterChampionsMana, 'function');
+      expect(typeof lol.filterChampionsMana).toBe('function');
     });
   })
   describe('lol.hpOfChampions', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.hpOfChampions, 'function');
+      expect(typeof lol.hpOfChampions).toBe('function');
     });
   })
   describe('lol.adOfChampions', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.adOfChampions, 'function');
+      expect(typeof lol.adOfChampions).toBe('function');
     });
   })
   describe('lol.sortChampionsCards', () => {
     test('debería ser una función', () => {
-      assert.equal(typeof lol.sortChampionsCards, 'function');
+      expect(typeof lol.sortChampionsCards).toBe('function');
     });
   })
 })

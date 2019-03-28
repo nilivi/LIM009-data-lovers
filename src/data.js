@@ -26,7 +26,7 @@ window.lol = {
     return abc
   },
 
-  hpOfChampions: (arr) => {
+  hpOfChampions: (arr, stat) => {
     const nuevoarray = arr.map((obj) => {
       return obj.hp
     })
