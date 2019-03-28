@@ -5,7 +5,7 @@ require('./data.spec.js');
 
 
 
-test('lol', () => {
+describe('lol', () => {
   const prueba = [
     ["Aatrox",
       {
@@ -116,7 +116,7 @@ test('lol', () => {
       }
     ],
     ["Akali", 
-    {
+      {
       version: "6.24.1",
       id: "Akali",
       key: "84",
@@ -170,7 +170,7 @@ test('lol', () => {
       }
     ],
     ["Alistar", 
-    {
+      {
       version: "6.24.1",
       id: "Alistar",
       key: "12",
@@ -221,13 +221,13 @@ test('lol', () => {
         attackspeedoffset: 0,
         attackspeedperlevel: 2.125
       }
-    }
+      }
     ]
   ]
   test('debería ser un objeto', () => {
     expect.objectContaining(lol)
   });
-  test('lol.getNameAndImageOfChampion', () => {
+  describe('lol.getNameAndImageOfChampion', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.getNameAndImageOfChampion, 'function');
     });
@@ -273,27 +273,27 @@ test('lol', () => {
       );
     });
   })
-  test('lol.filterChampionsRoles', () => {
+  describe('lol.filterChampionsRoles', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.filterChampionsRoles, 'function');
     });
   })
-  test('lol.filterChampionsMana', () => {
+  describe('lol.filterChampionsMana', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.filterChampionsMana, 'function');
     });
   })
-  test('lol.hpOfChampions', () => {
+  describe('lol.hpOfChampions', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.hpOfChampions, 'function');
     });
   })
-  test('lol.adOfChampions', () => {
+  describe('lol.adOfChampions', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.adOfChampions, 'function');
     });
   })
-  test('lol.sortChampionsCards', () => {
+  describe('lol.sortChampionsCards', () => {
     test('debería ser una función', () => {
       assert.equal(typeof lol.sortChampionsCards, 'function');
     });
