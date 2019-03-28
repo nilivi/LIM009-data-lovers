@@ -1,9 +1,9 @@
 // Llamando a los nombres de cada campeón
 const listOfChampions = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
+
 const selectRoles = document.getElementById('rol');
 const sortChampions = document.getElementById('sort');
-const championsInfo = document.getElementById("champions-info");
 const minNumber = document.getElementById('min-number');
 const maxNumber = document.getElementById('max-number');
 const minHp = document.getElementById('hp-min');
@@ -15,7 +15,7 @@ const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
-const btnSearch = document.getElementById('btn-search');
+//const btnSearch = document.getElementById('btn-search');
 const btnFilterSort = document.getElementById('btn-filter-sort');
 const asideStats = document.getElementById('aside');
 
@@ -44,7 +44,7 @@ const championsListElement = document.getElementById('champions');
 const printCardsOfChampions = (arrChampions) => {
   arrChampions.forEach((obj) => {
     const string = `
-        <section class="card" id=${obj.id} name = "champs">
+        <section id=${obj.id} name = "champs">
           <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
           <div class="name-card">
           <div class="champion-name">${obj.name}</div>
@@ -54,6 +54,7 @@ const printCardsOfChampions = (arrChampions) => {
         `
     const div = document.createElement('div')
     div.innerHTML = string
+    div.className = "card"
     championsListElement.appendChild(div);
     printMainInfo(div);
   });
@@ -65,8 +66,7 @@ const printMainInfo = (div) => {
   printName.addEventListener('click', () => {
     const atribId = printName.getAttribute('id');
     let string = ''
-    const arrPrintInfo = listOfChampions.filter((obj) => {
-      console.log(obj)
+     listOfChampions.filter((obj) => {
       if (atribId == obj[1].id) {
         string += `
     <figure class="champ-img">
@@ -77,18 +77,42 @@ const printMainInfo = (div) => {
     <div class="champ-rol">Rol: ${obj[1].tags}</div>
     <div class="champ-info">
     <ul>
-    <il>"AD-attack:" ${obj[1].info.attack}</li>
-    <il>"AP-magic:" ${obj[1].info.magic}</li>
-    <il>"DEF-defense:" ${obj[1].info.defense}</li>
-    <il>"DIF-difficulty:" ${obj[1].info.difficulty}</li>
+    <il>AD-attack: ${obj[1].info.attack}</li>
+    <il>AP-magic: ${obj[1].info.magic}</li>
+    <il>DEF-defense: ${obj[1].info.defense}</li>
+    <il>DIF-difficulty: ${obj[1].info.difficulty}</li>
     </ul>
     </section>
     <section class="info-stats">
-    <div class="champ-descrip">"Descripción: " ${obj[1].blurb}</div>
-    <h2 class="stat-title"> "Estadísticas" </h2>
+    <div class="champ-descrip">Descripción:${obj[1].blurb}</div>
+    <h2 class="stat-title"> Estadísticas </h2>
     <table class="table-stat">
     <tr>
-    <th> 
+      <th>HP</th>
+      <th>MP</th>
+      <th>Armor</th>
+      <th>Attack Damage</th>
+      <th>Spell Block</th>
+      <th>HP regen</th>
+      <th>MP regen</th>
+      <th>Attacks speed offset</th>
+      <th>Move speed</th>
+      <th>Attack range</th>
+
+    </tr>
+    <tr>
+      <td>${obj[1].stats.hp} (+${obj[1].stats.hpperlevel} por nivel) </td>
+      <td>${obj[1].stats.mp} (+${obj[1].stats.mpperlevel} por nivel)</td>
+      <td>${obj[1].stats.armor} (+${obj[1].stats.armorperlevel} por nivel)</td>
+      <td>${obj[1].stats.attackdamage} (+${obj[1].stats.attackdamageperlevel} por nivel)</td>
+      <td>${obj[1].stats.spellblock} (+${obj[1].stats.spellblockperlevel} por nivel)</td>
+      <td>${obj[1].stats.hpregen} (+${obj[1].stats.hpregenperlevel} por nivel)</td>
+      <td>${obj[1].stats.mpregen} (+${obj[1].stats.mpregenperlevel} por nivel) </td>
+      <td>${obj[1].stats.attackspeedoffset} (+${obj[1].stats.attackspeedperlevel} por nivel)</td>
+      <td>${obj[1].stats.movespeed}</td>
+      <td>${obj[1].stats.attackrange}</td>
+    </tr>
+    </table>
 `
         const divInfo = document.createElement('div')
         divInfo.innerHTML = string
@@ -96,6 +120,7 @@ const printMainInfo = (div) => {
         championsPage.appendChild(divInfo);
       }
     })
+
     championsListElement.classList.add('hide')
   })
 

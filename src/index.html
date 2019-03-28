@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">  -->
-    <!-- <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css" /> -->
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Ewert|Quattrocento" rel="stylesheet">
-
-
 </head>
 
 <body>
-    <nav class="navbar container-fluid hide" id="nav-bar">
+    <nav class="navbar hide" id="nav-bar">
         <header class="head-nav">LOGO-WEBSITE</header>
         <ul>
             <li><button class="btn-nav">Home</button></li>
@@ -79,8 +76,8 @@
                 </div>
                 <div class="nav-area ">
                     <label class="style-filter">Maná</label>
-                    <input type="number" class="number" id="min-number" value=0 step="10" min="0">
-                    <input type="number" class="number" id="max-number" value=500 step="10">
+                    <input type="number" class="number" id="min-number" value="0" step="10" min="0">
+                    <input type="number" class="number" id="max-number" value="500" step="10">
                 </div>
                 <div class="nav-area">
                     <p class="stat-value"> HP min: <div id="hp-min"></div>
@@ -99,7 +96,6 @@
         <header class="title">CAMPEONES</header>
 
         <div id="champions" class="champions"></div>
-        <div id="champions-info"></div>
     </main>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
