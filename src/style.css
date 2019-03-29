@@ -168,4 +168,6 @@ width:30%;
 .info-champions{
   color: white;
   font-size: 25px;
+  display: inline-block;
+  width: 50%;
 }
