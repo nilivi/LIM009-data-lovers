@@ -41,9 +41,10 @@ minNumber.addEventListener('keyup', funcFilterAndSort);
 
 const championsListElement = document.getElementById('champions');
 
-const printCardsOfChampions = (arrChampions) => {
+const printCardsOfChampions = (arrChampions) => { 
+    let string = ''
   arrChampions.forEach((obj) => {
-    const string = `
+     string = `
         <section id=${obj.id} name = "champs">
           <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
           <div class="name-card">
@@ -127,8 +128,8 @@ const printMainInfo = (div) => {
 
 }
 
-window.onload = () => {
-  printCardsOfChampions(arrNameAndImageOfChampions);
+window.onload = () => { 
+  // printCardsOfChampions(arrNameAndImageOfChampions);
   funcFilterAndSort()
 }
 
@@ -138,27 +139,25 @@ window.onload = () => {
 selectRoles.addEventListener('change', funcFilterAndSort)
 sortChampions.addEventListener('change', funcFilterAndSort)
 
-function funcFilterAndSort() {
+function funcFilterAndSort() { debugger
   let newChampionsArr = arrNameAndImageOfChampions
   if (selectRoles.value !== "default") {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
     newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
-    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
     newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
     printCardsOfChampions(newChampionsArr)
     statOfChamps(newChampionsArr)
-  }
+  } 
   newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
   printCardsOfChampions(newChampionsArr)
   statOfChamps(newChampionsArr)
 }
-
 function statOfChamps(arr) {
-  minHp.innerHTML = Math.min.apply(null, lol.hpOfChampions(arr))
-  maxHp.innerHTML = Math.max.apply(null, lol.hpOfChampions(arr))
-  minAd.innerHTML = Math.min.apply(null, lol.adOfChampions(arr))
-  maxAd.innerHTML = Math.max.apply(null, lol.adOfChampions(arr))
+  minHp.innerHTML = lol.statOfChampions(arr, 'min', 'hp')
+  maxHp.innerHTML = lol.statOfChampions(arr, 'max', 'hp')
+  minAd.innerHTML = lol.statOfChampions(arr, 'min', 'ad')
+  maxAd.innerHTML = lol.statOfChampions(arr, 'max', 'ad')
 }
 
 /*
