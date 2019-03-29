@@ -2,7 +2,7 @@
 const listOfChampions = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
 
-const selectRoles = document.getElementById('rol');
+const selectRoles = document.getElementById('rol');//
 const sortChampions = document.getElementById('sort');
 const minNumber = document.getElementById('min-number');
 const maxNumber = document.getElementById('max-number');
@@ -159,20 +159,22 @@ window.onload = () => {
 selectRoles.addEventListener('change', funcFilterAndSort)
 sortChampions.addEventListener('change', funcFilterAndSort)
 
-function funcFilterAndSort() {
-  let newChampionsArr = arrNameAndImageOfChampions
-  if (selectRoles.value !== "default") {
-    newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
-    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
-    newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
+function funcFilterAndSort() {//[{},{},{},...,{}] (una función que filtre por roles y ordene los campeones de la a-z, z-a)
+  let newChampionsArr = arrNameAndImageOfChampions//todos los campeones en un array
+  if (selectRoles.value !== "default") { debugger
+    newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)// me devuelve un array de objetos con los campeones filtrados por rol
+    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)//me devuelve un array de objetos ordenando de la a-z/z-a con los datos de un rol ya filtrado
+    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)// me devuelve un array de objetos ordenando lo ordenado
+    newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value) //me devuelve un array de objetos con max y min maná.
     printCardsOfChampions(newChampionsArr)
     statOfChamps(newChampionsArr)
   } 
   newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr)
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value)
-  printCardsOfChampions(newChampionsArr)
-  statOfChamps(newChampionsArr)
+  printCardsOfChampions(newChampionsArr);
+  statOfChamps(newChampionsArr);
 }
+
 function statOfChamps(arr) {
   minHp.innerHTML = lol.statOfChampions(arr, 'min', 'hp')
   maxHp.innerHTML = lol.statOfChampions(arr, 'max', 'hp')
