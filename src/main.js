@@ -15,9 +15,28 @@ const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
-//const btnSearch = document.getElementById('btn-search');
+const btnSearch = document.getElementById('btn-search');
+
+
+
 const btnFilterSort = document.getElementById('btn-filter-sort');
 const asideStats = document.getElementById('aside');
+
+
+
+const search = document.getElementById('search')
+const btnHome = document.getElementById('btn-home');
+const btnChamps = document.getElementById('btn-champs');
+const btnContact = document.getElementById('btn-contact');
+const infoChampion = document.getElementById('info-champion')
+
+btnSearch.addEventListener('click', function () { debugger
+  const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
+    return obj.id == search.value
+  })
+  console.log(searchChampions)
+  printCardsOfChampions(searchChampions)
+});
 
 btnInit.addEventListener('click', funcHideAndShow)
 btnTut.addEventListener('click', funcHideAndShow)
@@ -40,11 +59,10 @@ minNumber.addEventListener('change', funcFilterAndSort);
 minNumber.addEventListener('keyup', funcFilterAndSort);
 
 const championsListElement = document.getElementById('champions');
-
 const printCardsOfChampions = (arrChampions) => { 
-    let string = ''
+    championsListElement.innerHTML=""
   arrChampions.forEach((obj) => {
-     string = `
+    let string = `
         <section id=${obj.id} name = "champs">
           <div ><img class="champion-img" src=${obj.image} alt=${obj.name}/></div>
           <div class="name-card">
@@ -59,6 +77,7 @@ const printCardsOfChampions = (arrChampions) => {
     championsListElement.appendChild(div);
     printMainInfo(div);
   });
+
 }
 
 const printMainInfo = (div) => {
@@ -118,6 +137,7 @@ const printMainInfo = (div) => {
         const divInfo = document.createElement('div')
         divInfo.innerHTML = string
         divInfo.className = "info-champions"
+        divInfo.id= "info-champions"
         championsPage.appendChild(divInfo);
       }
     })
@@ -139,7 +159,7 @@ window.onload = () => {
 selectRoles.addEventListener('change', funcFilterAndSort)
 sortChampions.addEventListener('change', funcFilterAndSort)
 
-function funcFilterAndSort() { debugger
+function funcFilterAndSort() {
   let newChampionsArr = arrNameAndImageOfChampions
   if (selectRoles.value !== "default") {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions)
@@ -160,57 +180,3 @@ function statOfChamps(arr) {
   maxAd.innerHTML = lol.statOfChampions(arr, 'max', 'ad')
 }
 
-/*
-const bcd = lista.map(function(campeon){
-    console.log(campeon)
-    return campeon[1].info.attack ;
-})
-championsList.innerHTML= bcd
-*/
-
-
-
-//const getNameAndImageOfChampion = champios => champios.map(obj =>( {imagen:obj[1].img, name: obj[1].name}))
-/*console.log(getNameAndImageOfChampion(lista))
-const images = lista.map((campeon)=>{
-    return '<img src="'+ campeon[1].img +'">'
-})
-const names = lista.map((campeon)=>{
-    return campeon[1].name
-})
-*/
-
-/*championsCards = []
-
-//objs de img y nombre para c/card
-function inicio(){
-for (let i = 0; i < images.length; i++) {
-    const content = {Image: images[i], Name: names[i]};
-    championsCards.push(content)
-}
-return championsCards
-}
-*/
-
-//creamos los cards para cada champion
-/*const printCardsOfChampions =  (arrCampeones) =>{
-    championsListElement.innerHTML=""
-    for (let i = 0; i < arrCampeones.length; i++) {
-        const card = document.createElement('div');
-        const championName = document.createElement('div')
-        const championImg = document.createElement('div')
-        card.className = 'card'
-        championName.className = 'championName'
-        championImg.className = 'championImg';
-
-        // championsCards.sort()
-
-        championName.innerHTML = arrCampeones[i].Name
-        championImg.innerHTML = arrCampeones[i].Image
-
-        card.appendChild(championName)
-        card.appendChild(championImg)
-
-        championsListElement.appendChild(card)
-    }
-}*/
