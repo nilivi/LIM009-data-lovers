@@ -1,0 +1,48 @@
+video {
+    position: absolute;
+    left: 0;
+    top: 220px;
+    width: auto;
+    height: 450px;
+    z-index: -10;
+    visibility: visible;
+    display: none;
+}
+
+.logo-img {
+    width: 60%;
+}
+#welcome-pg{
+    /* background-image:url(http://mouse.latercera.com/wp-content/uploads/2018/02/League-900x558.jpg); */
+    background-image:url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
+    position: absolute;
+    top: 220px;
+    height: 450px;
+    width: auto;
+}
+.center-content{
+    padding-top:20%;
+    text-align: center;
+    align-content: space-between;
+}
+.intro-margin{
+    margin:10% 0;
+}
+.bg-img {
+    background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
+    border-top: 8px solid transparent;
+    border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
+    border-image-slice: 2;
+    position: absolute;
+    top: 670px;
+    height: 450px;
+    width: auto;
+}
+
+@media screen and (min-width: 900px){
+ video{
+     display:block;
+     width:100%;
+     height: auto;
+ }
+}

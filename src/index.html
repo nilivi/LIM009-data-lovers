@@ -2,53 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">  -->
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Ewert|Quattrocento" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <nav class="navbar hide" id="nav-bar">
-        <header class="head-nav">LOGO-WEBSITE</header>
-        <ul>
-            <li><button id="btn-home" class="btn-nav">Inicio</button></li>
-            <li><button id="btn-champs" class="btn-nav">Campeones</button></li>
-            <li><button id="btn-contact" class="btn-nav">Contacto</button></li>
-        </ul>
+    <nav class="nav-bar" id="nav-bar">
+        <h1 class="head-nav">LOGO-WEBSITE</h1>
+        <div class="nav-menu">
+            <ul>
+                <li><button id="btn-home" class="btn-nav">Inicio</button></li>
+                <li><button id="btn-champs" class="btn-nav">Campeones</button></li>
+                <li><button id="btn-contact" class="btn-nav">Contacto</button></li>
+            </ul>
+        </div>
     </nav>
 
-    <section class="total-screen center-content" id="welcome-pg">
-        <img src="https://bit.ly/2FseCUF" alt="Logo League of Legends">
+    <section class="container total-screen center-content" id="welcome-pg">
+        <img class="logo-img" src="https://bit.ly/2FseCUF" alt="Logo League of Legends" />
         <video id="hero-vid" loop autoplay preload muted style="opacity: 1;">
             <source
                 src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_ES/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/vid/hero-video.mp4"
-                type="video/mp4">
+                type="video/mp4" />
         </video>
-        <p class="intro-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam
+        <p class="intro-margin">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam
             repellendus nisi, provident
             pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum
             culpa
             saepe?</p>
         <button class="btn-init" id="btn-init">Descubre a tus campeones</button>
     </section>
-    <section class="total-screen bg-pg center-content" id="tut-pg">
-        <header></header>
-        <iframe src="https://www.youtube.com/embed/WWa5uAzYDkQ" frameborder="0"
+    <section class="container total-screen bg-img center-content" id="tut-pg">
+        <h2>¡Mira este video y comienza a jugar!</h2>
+        <iframe class="intro-margin video-tut" src="https://www.youtube.com/embed/WWa5uAzYDkQ"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
         <button class="btn-init" id="btn-tut">Descubre a tus campeones</button>
     </section>
 
-    <main class="total-screen hide bg-pg" id="champions-pg">
+    <main class="container total-screen hide" id="champions-pg">
         <nav class="navbar navbar-inverse">
             <div class="nav-stats">
                 <button id="btn-filter-sort" class="btn-champions">Ordenar y filtrar</button>
             </div>
             <div class="nav-stats">
-                <input id="search" type="search">
+                <input id="search" type="search" />
                 <button id="btn-search" class="btn-champions">Buscar</button>
             </div>
         </nav>
@@ -75,8 +75,8 @@
                 </div>
                 <div class="nav-area ">
                     <label class="style-filter">Maná</label>
-                    <input type="number" class="number" id="min-number" value="0" step="10" min="0">
-                    <input type="number" class="number" id="max-number" value="500" step="10">
+                    <input type="number" class="number" id="min-number" value="0" step="10" min="0" />
+                    <input type="number" class="number" id="max-number" value="500" step="10" />
                 </div>
                 <div class="nav-area">
                     <p class="stat-value"> HP min: <div id="hp-min"></div>
@@ -92,10 +92,13 @@
                 </div>
             </form>
         </aside>
-        <header class="title">CAMPEONES</header>
+        <h2 class="title">CAMPEONES</h2>
 
         <div id="champions" class="champions"></div>
     </main>
+    <footer>
+        <p>Made by Kath&Nina ©️ Copyright 2019 </p>
+    </footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
