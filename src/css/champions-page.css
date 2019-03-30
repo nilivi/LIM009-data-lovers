@@ -1,0 +1,33 @@
+.card {
+    width: 100%;
+    margin: 1.5em 5%;
+    display: table;
+}
+
+.champion-img {
+    width: 85%;
+}
+
+.champions {
+    display: flex;
+    flex-flow: wrap;
+}
+
+@media screen and (min-width:450px) {
+    .card {
+        width: 25%;
+        margin: 0.5em;
+    }
+    .champion-img {
+        width: 100%;
+    }
+    .champions{
+        justify-content: center;
+    }
+}
+@media screen and (min-width:1024px) {
+    .card {
+        width: 20%;
+        margin: 0.5em;
+    }
+}

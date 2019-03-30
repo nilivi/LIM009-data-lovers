@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url(menu-bar.css);
+@import url(welcome-page.css);
+@import url(champions-page.css);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.container{
+  width: 100%;
+  margin: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(19, 18, 18);
+  color: white;
+  border-top:1px solid rgba(245, 245, 245, 0.397);
+}
