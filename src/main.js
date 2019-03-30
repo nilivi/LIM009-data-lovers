@@ -106,26 +106,17 @@ const printMainInfo = (div) => {
       <th>HP</th>
       <th>MP</th>
       <th>Armor</th>
-      <th>Attack Damage</th>
-      <th>Spell Block</th>
+      <th>AD</th>
       <th>HP regen</th>
       <th>MP regen</th>
-      <th>Attacks speed offset</th>
-      <th>Move speed</th>
-      <th>Attack range</th>
-
     </tr>
     <tr>
       <td>${obj[1].stats.hp} (+${obj[1].stats.hpperlevel} por nivel) </td>
       <td>${obj[1].stats.mp} (+${obj[1].stats.mpperlevel} por nivel)</td>
       <td>${obj[1].stats.armor} (+${obj[1].stats.armorperlevel} por nivel)</td>
       <td>${obj[1].stats.attackdamage} (+${obj[1].stats.attackdamageperlevel} por nivel)</td>
-      <td>${obj[1].stats.spellblock} (+${obj[1].stats.spellblockperlevel} por nivel)</td>
       <td>${obj[1].stats.hpregen} (+${obj[1].stats.hpregenperlevel} por nivel)</td>
       <td>${obj[1].stats.mpregen} (+${obj[1].stats.mpregenperlevel} por nivel) </td>
-      <td>${obj[1].stats.attackspeedoffset} (+${obj[1].stats.attackspeedperlevel} por nivel)</td>
-      <td>${obj[1].stats.movespeed}</td>
-      <td>${obj[1].stats.attackrange}</td>
     </tr>
     </table>
 `;
