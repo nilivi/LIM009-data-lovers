@@ -13,6 +13,7 @@ const maxAd = document.getElementById('ad-max');
 const welcomePage = document.getElementById('welcome-pg');
 const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
+const championsCard = document.getElementById('card');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
 const btnSearch = document.getElementById('btn-search');
@@ -23,25 +24,37 @@ const asideStats = document.getElementById('aside');
 
 
 const search = document.getElementById('search');
-// const btnHome = document.getElementById('btn-home');
-// const btnChamps = document.getElementById('btn-champs');
+const btnHome = document.getElementById('btn-home');
+const btnChamps = document.getElementById('btn-champs');
 // const btnContact = document.getElementById('btn-contact');
-// const infoChampion = document.getElementById('info-champion');
+const infoChampion = document.getElementById('info-champions');
 
 btnSearch.addEventListener('click', function() {
   const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
-    return obj.id === search.value;
+    obj.id === search.value;
+    
   });
   printCardsOfChampions(searchChampions);
-});
+ });
+
+ btnHome.addEventListener('click', funcHideHome);
+  
+ function funcHideHome() {
+   welcomePage.classList.remove('hide');
+   tutPage.classList.remove('hide');
+   championsPage.classList.add('hide');
+   infoChampion.classList.add('hide');
+ }
 
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
+btnChamps.addEventListener('click', funcHideAndShow);
 
 function funcHideAndShow() {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
+  infoChampion.classList.add('hide');
 }
 
 btnFilterSort.addEventListener('click', funcHideAside);
@@ -71,6 +84,7 @@ const printCardsOfChampions = (arrChampions) => {
     const div = document.createElement('div');
     div.innerHTML = string;
     div.className = 'card';
+    div.id = 'card';
     championsListElement.appendChild(div);
     printMainInfo(div);
   });
