@@ -1,3 +1,9 @@
+#champions-pg {
+    background-image: url(https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png);
+    border-top: 8px solid transparent;
+    background-attachment: fixed;
+    width: auto;
+} 
 .card {
     width: 100%;
     margin: 1.5em 5%;
@@ -25,6 +31,14 @@
         justify-content: center;
     }
 }
+
+@media screen and (min-width:630px){
+    
+    .navbar{
+        padding-top: 55px;
+    }
+}
+
 @media screen and (min-width:1024px) {
     .card {
         width: 20%;
