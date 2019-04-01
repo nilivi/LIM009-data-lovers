@@ -43,35 +43,77 @@ video {
 	width: auto;
 }
 
-@media screen and (min-width:500px){
+@media screen and (min-width:470px){
 	.center-content {
 		padding-top: 8%;
 		text-align: center;
 		align-content: space-between;
+	}
+	.video-tut .btn-init{
+		text-align: center;
 	}
 }
 
 @media screen and (min-width: 630px) {
 	.center-content {
 		padding-top: 13%;
-		text-align: center;
-		align-content: space-between;
 	}
 	#welcome-pg{
 		top:55px;
 	}
 	.bg-img{
 		top: 500px;
+		height: 53%;
 	}
 	.logo-img {
 		width: 45%;
 	}
 }
 
+@media screen and (min-width: 720px) {
+	.center-content {
+		padding-top: 8%;
+	}
+
+	.bg-img{
+		top: 500px;
+		height: 70%;
+	}
+	
+	.logo-img {
+		width: 35%;
+	}
+}
+
 @media screen and (min-width: 900px) {
-	video {
-		display: block;
+	
+video{
+	  display: block;
 		width: 100%;
 		height: auto;
+	
+}
+#welcome-pg background-image{
+	display: none;
+}
+	.logo-img {
+		width: 25%;
+	}
+
+.intro-margin {
+	margin: 5% 0;
+}
+.bg-img{
+	height: 70%
+}
+}
+
+@media screen and (min-width: 1202px){
+	#welcome-pg{
+		top:5px;
+	}
+	.bg-img{
+		top: 450px;
+		
 	}
 }

@@ -31,7 +31,7 @@ const infoChampion = document.getElementById('info-champions');
 
 btnSearch.addEventListener('click', function() {
   const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
-    obj.id === search.value;
+    return obj.id === search.value;
     
   });
   printCardsOfChampions(searchChampions);
@@ -43,18 +43,26 @@ btnSearch.addEventListener('click', function() {
    welcomePage.classList.remove('hide');
    tutPage.classList.remove('hide');
    championsPage.classList.add('hide');
-   infoChampion.classList.add('hide');
+  //  infoChampion.classList.add('hide');
+ }
+
+ btnChamps.addEventListener('click', funcHideChamps);
+ 
+ function funcHideChamps() {
+   welcomePage.classList.add('hide');
+   tutPage.classList.add('hide');
+   championsPage.classList.remove('hide');
+  //  infoChampion.classList.add('hide');
  }
 
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
-btnChamps.addEventListener('click', funcHideAndShow);
 
 function funcHideAndShow() {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
-  infoChampion.classList.add('hide');
+  // infoChampion.classList.add('hide');
 }
 
 btnFilterSort.addEventListener('click', funcHideAside);
