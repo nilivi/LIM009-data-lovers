@@ -43,7 +43,7 @@ btnSearch.addEventListener('click', function() {
    welcomePage.classList.remove('hide');
    tutPage.classList.remove('hide');
    championsPage.classList.add('hide');
-  //  infoChampion.classList.add('hide');
+   infoChampion.classList.add('hide');
  }
 
  btnChamps.addEventListener('click', funcHideChamps);
@@ -52,7 +52,12 @@ btnSearch.addEventListener('click', function() {
    welcomePage.classList.add('hide');
    tutPage.classList.add('hide');
    championsPage.classList.remove('hide');
-  //  infoChampion.classList.add('hide');
+   championsListElement.classList.remove('hide')
+   infoChampion.classList.add('hide');
+   funcFilterAndSort();
+   lol.filterChampionsRoles('default', arrNameAndImageOfChampions);
+   lol.sortChampionsCards('az', arrNameAndImageOfChampions)
+
  }
 
 btnInit.addEventListener('click', funcHideAndShow);
@@ -62,7 +67,6 @@ function funcHideAndShow() {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
-  // infoChampion.classList.add('hide');
 }
 
 btnFilterSort.addEventListener('click', funcHideAside);
@@ -100,7 +104,8 @@ const printCardsOfChampions = (arrChampions) => {
 
 const printMainInfo = (div) => {
   const printName = div.querySelector('[name=\'champs\']');
-  printName.addEventListener('click', () => {
+  infoChampion.innerHTML=""
+    printName.addEventListener('click', () => {
     const atribId = printName.getAttribute('id');
     let string = '';
     listOfChampions.filter((obj) => {
@@ -144,18 +149,18 @@ const printMainInfo = (div) => {
 `;
         const divInfo = document.createElement('div');
         divInfo.innerHTML = string;
-        divInfo.className = 'info-champions';
-        divInfo.id = 'info-champions';
-        championsPage.appendChild(divInfo);
+        divInfo.className = 'data-champ';
+        divInfo.id = 'data-champ';
+        infoChampion.appendChild(divInfo);
       }
     });
-
     championsListElement.classList.add('hide');
+    infoChampion.classList.remove('hide')
+
   });
 };
 
 window.onload = () => {
-  // printCardsOfChampions(arrNameAndImageOfChampions);
   funcFilterAndSort();
 };
 

@@ -1,7 +1,6 @@
 global.window = global;
 require('../src/data');
 
-
 describe('lol', () => {
   const prueba = [
     ['Aatrox',
@@ -12,7 +11,7 @@ describe('lol', () => {
         name: 'Aatrox',
         title: 'the Darkin Blade',
         img:
-          'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png',
+          'https://www.masternpm testypoints.com/assets/img/lol/champion_icons/Aatrox.png',
         splash:
           'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg',
         blurb:

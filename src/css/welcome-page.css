@@ -1,10 +1,10 @@
 video {
 	position: absolute;
 	left: 0;
-	top: 220px;
+	top: 55px;
 	width: auto;
 	height: 450px;
-	z-index: -10;
+	z-index: 0;
 	visibility: visible;
 	display: none;
 }
@@ -68,6 +68,12 @@ video {
 	.logo-img {
 		width: 45%;
 	}
+	video{
+		display:block;
+	}
+	.welcome-text{
+		z-index: 1;
+	}
 }
 
 @media screen and (min-width: 720px) {
@@ -92,9 +98,6 @@ video{
 		width: 100%;
 		height: auto;
 	
-}
-#welcome-pg background-image{
-	display: none;
 }
 	.logo-img {
 		width: 25%;
