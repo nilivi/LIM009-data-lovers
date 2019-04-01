@@ -37,28 +37,21 @@ btnSearch.addEventListener('click', function() {
   printCardsOfChampions(searchChampions);
  });
 
- btnHome.addEventListener('click', funcHideHome);
-  
- function funcHideHome() {
+ btnHome.addEventListener('click', ()=> {
    welcomePage.classList.remove('hide');
    tutPage.classList.remove('hide');
    championsPage.classList.add('hide');
    infoChampion.classList.add('hide');
- }
+ })
 
- btnChamps.addEventListener('click', funcHideChamps);
- 
- function funcHideChamps() {
+ btnChamps.addEventListener('click',()=>{
    welcomePage.classList.add('hide');
    tutPage.classList.add('hide');
    championsPage.classList.remove('hide');
    championsListElement.classList.remove('hide')
    infoChampion.classList.add('hide');
    funcFilterAndSort();
-   lol.filterChampionsRoles('default', arrNameAndImageOfChampions);
-   lol.sortChampionsCards('az', arrNameAndImageOfChampions)
-
- }
+ })
 
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
