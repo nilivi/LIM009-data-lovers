@@ -2,8 +2,6 @@
 @import url(menu-bar.css);
 @import url(welcome-page.css);
 @import url(champions-page.css);
-@import url(buscar-page.css);
-
 
 * {
   margin: 0;
