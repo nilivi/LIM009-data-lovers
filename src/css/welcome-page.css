@@ -1,122 +1,117 @@
 video {
-	position: absolute;
-	left: 0;
-	top: 55px;
-	width: auto;
-	height: 450px;
-	z-index: 0;
-	visibility: visible;
-	display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  overflow: hidden;
+  height: 100%;
+  /* z-index: -10; */
+  visibility: visible;
+  display: none;
+  opacity: 1;
 }
 
 .logo-img {
-	width: 60%;
+  width: 60%;
 }
 
 #welcome-pg {
-	/* background-image:url(http://mouse.latercera.com/wp-content/uploads/2018/02/League-900x558.jpg); */
-	background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
-	position: absolute;
-	top: 220px;
-	height: 450px;
-	width: auto;
+  background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
+  position: relative;
+  top: 220px;
+  height: 150vh;
+  width: auto;
+  padding:0
 }
-
+.welcome-text{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
 .center-content {
-	padding-top: 20%;
-	text-align: center;
-	align-content: space-between;
+  padding-top: 20%;
+  text-align: center;
+  align-content: space-between;
 }
 
 .intro-margin {
-	margin: 10% 0;
+  margin: 10% 0;
+  color: white;
+  font-weight: bold;
 }
 
 .bg-img {
-	background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
-	border-top: 8px solid transparent;
-	border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
-	border-image-slice: 2;
-	position: absolute;
-	top: 670px;
-	height: 450px;
-	width: auto;
+  background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
+  border-top: 8px solid transparent;
+  border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
+  border-image-slice: 2;
+  position: absolute;
+  /* top: 100vh;  */
+  height: 100vh;
+  /* width: auto; */
 }
 
-@media screen and (min-width:470px){
-	.center-content {
-		padding-top: 8%;
-		text-align: center;
-		align-content: space-between;
-	}
-	.video-tut .btn-init{
-		text-align: center;
-	}
+@media screen and (min-width:470px) {
+  .center-content {
+    padding-top: 8%;
+    text-align: center;
+    align-content: space-between;
+  }
+  .video-tut .btn-init {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 630px) {
-	.center-content {
-		padding-top: 13%;
-	}
-	#welcome-pg{
-		top:55px;
-	}
-	.bg-img{
-		top: 500px;
-		height: 53%;
-	}
-	.logo-img {
-		width: 45%;
-	}
-	video{
-		display:block;
-	}
-	.welcome-text{
-		z-index: 1;
-	}
+  .center-content {
+    padding-top: 13%;
+  }
+  .logo-img {
+    width: 45%;
+  }
 }
 
 @media screen and (min-width: 720px) {
-	.center-content {
-		padding-top: 8%;
-	}
-
-	.bg-img{
-		top: 500px;
-		height: 70%;
-	}
-	
-	.logo-img {
-		width: 35%;
-	}
+  .center-content {
+    padding-top: 8%;
+  }
+  .logo-img {
+    width: 35%;
+  }
+  #welcome-pg {
+    top: 50%;
+    height: calc(100vh);
+    background-image: none;
+  }
+  video {
+    display: block;
+    height:auto
+    /* width:100% */
+  }
 }
 
 @media screen and (min-width: 900px) {
-	
-video{
-	  display: block;
-		width: 100%;
-		height: auto;
-	
+  video {
+    /* display: block;
+    width:100%;
+    overflow: hidden; */
+    position:relative;
+    display: flex;
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 500px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden
+    /* height: 100vh; */
+  }
+  .logo-img {
+    width: 25%;
+  }
+  .intro-margin {
+    margin: 5% 0;
+  }
 }
-	.logo-img {
-		width: 25%;
-	}
 
-.intro-margin {
-	margin: 5% 0;
-}
-.bg-img{
-	height: 70%
-}
-}
-
-@media screen and (min-width: 1202px){
-	#welcome-pg{
-		top:5px;
-	}
-	.bg-img{
-		top: 450px;
-		
-	}
-}

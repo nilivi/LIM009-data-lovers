@@ -13,7 +13,7 @@ const maxAd = document.getElementById('ad-max');
 const welcomePage = document.getElementById('welcome-pg');
 const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
-const championsCard = document.getElementById('card');
+// const championsCard = document.getElementById('card');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
 const btnSearch = document.getElementById('btn-search');
@@ -32,26 +32,28 @@ const infoChampion = document.getElementById('info-champions');
 btnSearch.addEventListener('click', function() {
   const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
     return obj.id === search.value;
-    
   });
   printCardsOfChampions(searchChampions);
- });
+});
 
- btnHome.addEventListener('click', ()=> {
-   welcomePage.classList.remove('hide');
-   tutPage.classList.remove('hide');
-   championsPage.classList.add('hide');
-   infoChampion.classList.add('hide');
- })
+btnHome.addEventListener('click', () => {
+  welcomePage.classList.remove('hide');
+  tutPage.classList.remove('hide');
+  championsPage.classList.add('hide');
+  infoChampion.classList.add('hide');
+});
 
- btnChamps.addEventListener('click',()=>{
-   welcomePage.classList.add('hide');
-   tutPage.classList.add('hide');
-   championsPage.classList.remove('hide');
-   championsListElement.classList.remove('hide')
-   infoChampion.classList.add('hide');
-   funcFilterAndSort();
- })
+btnChamps.addEventListener('click', () => { 
+  welcomePage.classList.add('hide');
+  tutPage.classList.add('hide');
+  championsPage.classList.remove('hide');
+  championsListElement.classList.remove('hide');
+  infoChampion.classList.add('hide');
+  sortChampions.value = 'az';
+  selectRoles.value = 'default';
+  minNumber.value = 0;
+  maxNumber.value = 0;
+});
 
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
@@ -97,20 +99,20 @@ const printCardsOfChampions = (arrChampions) => {
 
 const printMainInfo = (div) => {
   const printName = div.querySelector('[name=\'champs\']');
-  infoChampion.innerHTML=""
-    printName.addEventListener('click', () => {
+  printName.addEventListener('click', () => {
+    infoChampion.innerHTML = '';
     const atribId = printName.getAttribute('id');
     let string = '';
     listOfChampions.filter((obj) => {
       if (atribId === obj[1].id) {
         string += `
     <figure class="champ-img">
-    <img class="champion-img"src=${obj[1].splash} alt=${obj[1].name}>
+    <img class="champion-info-img"src=${obj[1].splash} alt=${obj[1].name}>
     </figure>
     <section class="info-gnrl">
-    <div class="champ-name">${obj[1].name}</div>
-    <div class="champ-rol">Rol: ${obj[1].tags}</div>
-    <div class="champ-info">
+    <div class="champion-info-name">${obj[1].name}</div>
+    <div class="champion-info-rol">Rol: ${obj[1].tags}</div>
+    <div class="champ-info-">
     <ul>
     <il>AD-attack: ${obj[1].info.attack}</li>
     <il>AP-magic: ${obj[1].info.magic}</li>
@@ -148,8 +150,7 @@ const printMainInfo = (div) => {
       }
     });
     championsListElement.classList.add('hide');
-    infoChampion.classList.remove('hide')
-
+    infoChampion.classList.remove('hide');
   });
 };
 

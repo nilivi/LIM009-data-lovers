@@ -1,23 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url(menu-bar.css);
 @import url(welcome-page.css);
 @import url(champions-page.css);
+@import url(champions-info.css);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .hide {
   display: none;
 }
-body{
+
+body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-.container{
+.container {
   width: 100%;
   margin: auto;
+}
+
+.btn-init {
+  font-family: DIN Next, serif;
+  font-size: 1.2rem;
+  font-stretch: condensed;
+  cursor: pointer;
+  width: 250px;
+  background-color: #363537;
+  color:#BEBBBB;
+}
+
+h2{
+text-align: center;
+margin: 1em;
+color: white;
 }
 
 footer {
@@ -27,5 +48,5 @@ footer {
   text-align: center;
   background-color: rgb(19, 18, 18);
   color: white;
-  border-top:1px solid rgba(245, 245, 245, 0.397);
+  border-top: 1px solid rgba(245, 245, 245, 0.397);
 }
