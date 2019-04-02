@@ -58,14 +58,20 @@ white-space: nowrap;
   font-weight: bold;
 }
 
-/* .bg-img {
+.bg-img {
   background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
   border-top: 8px solid transparent;
   border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
   border-image-slice: 2;
   position: absolute;
   height: 100vh;
-} */
+}
+
+@media screen and (min-width:320px) {
+  #welcome-pg{
+    top:0;
+  }
+}
 
 @media screen and (min-width:470px) {
   .center-content {
@@ -145,6 +151,12 @@ white-space: nowrap;
   }
   .intro-margin {
     margin: 5% 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bg-img{
+    top: 500px;
   }
 }
 
