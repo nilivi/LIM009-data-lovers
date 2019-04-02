@@ -43,7 +43,7 @@ h1 {
   width: 100%;
 }
 
-ul li {
+.nav-menu ul li {
   padding: 0.5em;
   list-style: none;
   height: 55px;
@@ -61,7 +61,7 @@ ul li {
   outline: 0;
 }
 
-@media screen and (min-width:630px) {
+@media screen and (min-width:768px) {
   .nav-main, .nav-menu {
     width: 42%;
   }
@@ -77,8 +77,10 @@ ul li {
     width: 100%;
     position: fixed;
   }
-  
-  ul li {
+  .nav-menu  ul {
+    float: right;
+  }
+  .nav-menu ul li {
     padding: 0.2em;
     margin: 0 7px;
     display: inline-block;

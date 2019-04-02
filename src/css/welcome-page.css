@@ -10,46 +10,60 @@ video {
   display: none;
   opacity: 1;
 }
-.tut-pg{
-  height: 100vh;
+
+.tut-pg {
+  height: 80vh;
 }
-.btn-init{
-background-color: #E71D36 !important;
-box-shadow: 0 6px rgba(231, 29, 53, 0.657);
-border-radius: 30px;
-font-size: 24px;
-color: #ffffff !important;
-padding: 27px 20px 20px 20px!important;
-position: relative;
-font-family: BeaufortW01-Bold;
-text-decoration: none;
-border: none;
-display: inline-block;
-white-space: nowrap;
+
+.btn-init {
+  background-color: #E71D36 !important;
+  box-shadow: 0 6px rgba(231, 29, 53, 0.657);
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff !important;
+  padding: 27px 20px 20px 20px!important;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
 }
+
 .logo-img {
-  width: 60%;
+  width: 100%;
 }
 
 #welcome-pg {
   background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
   position: relative;
-  /* top: 220px; */
+  top: 0;
   height: 100vh;
   width: auto;
-  padding:0
+  padding: 0
 }
-.welcome-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
 }
+
 .center-content {
   padding-top: 20%;
   text-align: center;
   align-content: space-between;
+}
+
+/* .center-content {
+  padding-top: 8%;
+} */
+
+.btn-init {
+  text-align: center;
 }
 
 .intro-margin {
@@ -67,13 +81,13 @@ white-space: nowrap;
   height: 100vh;
 } */
 
-@media screen and (min-width:320px) {
+/* @media screen and (min-width:320px) {
   #welcome-pg{
     top:0;
   }
-}
+} */
 
-@media screen and (min-width:470px) {
+/* @media screen and (min-width:470px) {
   .center-content {
     padding-top: 8%;
     text-align: center;
@@ -82,61 +96,101 @@ white-space: nowrap;
   .video-tut .btn-init {
     text-align: center;
   }
-}
+} */
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 768px) {
   .center-content {
     padding-top: 13%;
-  }
-  .logo-img {
-    width: 50%;
-  }
-  #welcome-pg {
-  top:55px;
-  max-height:100%;
-  }
-  iframe{
-    width: 60%;
-    height: 50%;
-    float: left;
-    position: relative;
-    left:25px;
-  }
-  #btn-tut{
-    display:inline-block;
-    position: relative;
-    top: 280px;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  .center-content {
-    padding-top: 5%;
   }
   .logo-img {
     width: 80%;
   }
   #welcome-pg {
-    top: 50%;
-    height: calc(100vh);
-    background-image: none;
+    max-height: 100%;
   }
-  video {
-    display: block;
-    height:auto
-    /* width:100% */
+  .video-tut {
+    width: 80%;
+    height: 70%;
+    position: relative;
+    left: 25px;
+    margin: 3%;
   }
-  #btn-tut{
-    top: 150px;
+  #btn-tut {
+    position: relative;
+    top: 0;
+    margin-bottom: 5%;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
+  .center-content {
+    padding-top: 0;
+  }
+  .welcome-text {
+    top: 35%;
+  }
+  #welcome-pg {
+    top: 50%;
+    height: calc(100vh);
+    background-image: none;
+    overflow: hidden; /*Sirve para no mostrar img demàs del contenido del section*/
+  }
+  
+  video {
+    position: relative;
+    display: block;
+    height: auto;
+    top: 55px;
+    width: 100%;
+    /* margin-bottom: -150px; */
+    /* max-height: 100%; */
+  }
+  .video-tut {
+    height: 60%;
+    width: 55%;
+    float: left;
+  }
+  #btn-tut {
+    display: inline-block;
+    margin-top: 15%;
+  }
+  .intro-margin {
+    margin: 5% 0;
+  }
+  .logo-img {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .center-content {
+    padding-top: 8%;
+  }
+  .logo-img {
+    width: 35%;
+  }
+  #btn-tut{
+    top: 10%;
+  }
+.tut-pg{
+  height: 80vh;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  #welcome-text {
+    height: 50%;
+  }
+  /* .center-content {
+    padding-top: 5%;
+  } */
+  .logo-img {
+    width: 40%;
+  }
   video {
     /* display: block;
     width:100%;
     overflow: hidden; */
-    position:relative;
     display: flex;
     width: 100%;
     /* height: 100vh; */
@@ -146,15 +200,13 @@ white-space: nowrap;
     overflow-y: hidden
     /* height: 100vh; */
   }
-  
   .intro-margin {
     margin: 5% 0;
   }
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .bg-img{
     top: 500px;
   }
-}
-
+} */

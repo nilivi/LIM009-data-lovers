@@ -54,7 +54,7 @@ aside input {
     }
 }
 
-@media screen and (min-width:630px) {
+@media screen and (min-width:768px) {
     .aside {
         float: left;
         height: 100vh;
@@ -65,7 +65,7 @@ aside input {
         text-align: center;
         font-style: italic;
         position: relative;
-        top: 55px;
+        top:105px;
         left: 0px;
     }
     .champions {
@@ -75,15 +75,15 @@ aside input {
         margin: 0;
         padding: 2%;
         overflow: scroll;
-        height: calc(75vh);
+        height: 68vh;
     }
     .title {
-        font-size: 50px;
+        font-size: 55px;
         text-align: center;
         font-weight: bold;
         color: whitesmoke;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
+        margin-top: 2em;
+        margin-bottom: 0.3em;
         color:#261F27;
     }
     .navbar-inverse {
@@ -94,11 +94,12 @@ aside input {
         background-color: #222;
         border-color: #080808;
         font-size: 25px;
-        color: whitesmoke;
-        position: sticky;
-        top: 55px;
-        height: 55px;
-        padding: 0.5em;
+        color: rgb(219, 207, 207);
+        position: fixed;
+        top:55px;
+        height: 50px;
+        padding: 0.3em;
+        z-index:100;
     }
 }
 

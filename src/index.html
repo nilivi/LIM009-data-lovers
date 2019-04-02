@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>LeagueFic</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -12,44 +12,44 @@
   <nav class="nav-bar" id="nav-bar">
     <div class="nav-main">
       <h1 class="head-nav">LeagueFic</h1>
-    </div>  
+    </div>
     <div class="nav-menu">
       <ul>
-        <li><button id="btn-home" class="btn-nav">Inicio</button></li>
-        <li><button id="btn-champs" class="btn-nav">Campeones</button></li>
-        <li><button id="btn-contact" class="btn-nav">Contacto</button></li>
+        <li><button id="btn-home" class="btn-nav">Home</button></li>
+        <li><button id="btn-champs" class="btn-nav">Champions</button></li>
+        <li><button id="btn-contact" class="btn-nav">Contact us</button></li>
       </ul>
     </div>
   </nav>
 
-  <section class="container  center-content" id="welcome-pg">
-    <video id="hero-vid"  autoplay="autoplay" loop="loop" muted ="muted">
+  <section class="container" id="welcome-pg">
+    <video id="hero-vid" autoplay="autoplay" loop="loop" muted="muted">
       <source
         src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_ES/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/vid/hero-video.mp4"
         type="video/mp4" />
     </video>
-    <div class="welcome-text">
-      <img class="logo-img" src="assets/lol-white-logo.png" alt="Logo League of Legends"/>
+    <div class="welcome-text center-content">
+      <img class="logo-img" src="assets/lol-white-logo.png" alt="Logo League of Legends" />
       <p class="intro-margin">This is what you need to become a better LOL player</p>
       <button class="btn-init" id="btn-init">GO TO CHAMPIONS</button>
     </div>
   </section>
-  <section class="container  bg-img center-content tut-pg" id="tut-pg">
+  <section class="container tut-pg" id="tut-pg">
     <h2>Look at this video and start to play!</h2>
-    <iframe class="intro-margin video-tut" src="https://www.youtube.com/embed/WWa5uAzYDkQ"
+    <iframe class="video-tut" src="https://www.youtube.com/embed/WWa5uAzYDkQ"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
     </iframe>
     <button class="btn-init" id="btn-tut">GO TO CHAMPIONS</button>
   </section>
 
   <main class="container  hide" id="champions-pg">
-    <header class="navbar-inverse">
+    <header id="nav-filter-search" class="navbar-inverse hide">
       <div class="nav-stats">
-        <button id="btn-filter-sort" class="btn-champions">Ordenar y filtrar</button>
+        <button id="btn-filter-sort" class="btn-champions">Filter and sort</button>
       </div>
       <div class="nav-stats">
         <input id="search" type="search" />
-        <button id="btn-search" class="btn-champions">Buscar</button>
+        <button id="btn-search" class="btn-champions">Search</button>
       </div>
     </header>
     <aside class="aside hide" id="aside">
@@ -67,14 +67,14 @@
           </select>
         </div>
         <div class="nav-area ">
-          <label class="style-filter" for="sort">Ordenar</label>
+          <label class="style-filter" for="sort">Sort</label>
           <select name="sort" id="sort">
             <option value="az" id="az">A-Z</option>
             <option value="za" id="za">Z-A</option>
           </select>
         </div>
         <div class="nav-area ">
-          <label class="style-filter">Maná</label>
+          <label class="style-filter">Mana</label>
           <input type="number" class="number" id="min-number" value="0" step="10" min="0" />
           <input type="number" class="number" id="max-number" value="500" step="10" />
         </div>
@@ -83,20 +83,20 @@
           <p class="stat-value"> HP max: <span id="hp-max"></span></p>
         </div>
         <div class="nav-area">
-          <p class="stat-value"> AD min: <span id="ad-min"></span></p>
-          <p class="stat-value"> AD max: <span id="ad-max"></span></p>
+          <p class="stat-value"> AD min: <span id="adchamp-min"></span></p>
+          <p class="stat-value"> AD max: <span id="adchamp-max"></span></p>
         </div>
         <button type="reset">Reset</button>
       </form>
     </aside>
-    <h2 class="title">CAMPEONES</h2>
+    <h2 class="title">CHAMPIONS</h2>
 
     <div id="champions" class="champions"></div>
     <div id="info-champions" class="info-champions"></div>
 
   </main>
   <footer>
-    <p>Made by Kath&Nina ©️ Copyright 2019 </p>
+    <p>Made by Kath&Nina ©️ LeagueFic 2019 </p>
   </footer>
   <script src="./data/lol/lol.js"></script>
   <script src="data.js"></script>

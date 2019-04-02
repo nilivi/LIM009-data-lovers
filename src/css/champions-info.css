@@ -2,26 +2,31 @@
     width: 80%;
     margin: 16px;
 }
+
 .champion-info-name {
     font-size: 50px;
 }
-.champion-info-rol{
+
+.champion-info-rol {
     font-size: 30px;
     padding: 20px;
 }
 
-.info-general{
+.info-general {
     font-size: 20px;
+    list-style: none;
 }
-.champ-descrip{
+
+.champ-descrip {
     padding-top: 1em;
     font-size: 20px;
-    margin:16px;
+    margin: 16px;
 }
 
 .stat-title {
     padding-top: 1em;
 }
+
 .data-champ {
     align-content: center;
     text-align: center;
@@ -31,15 +36,14 @@
 
 .info-champions {
     color: #2A2A29;
+    width: 100%;
 }
 
 .info-stats {
     display: block;
 }
-
 table {
     width: 100%;
-    border: 1px solid #000;
 }
 
 th, td {
@@ -48,39 +52,38 @@ th, td {
     vertical-align: center;
     border: 1px solid #000;
     border-collapse: collapse;
-   padding: 0.3em;
-   caption-side: bottom;
+    padding: 0.3em;
+    caption-side: bottom;
+    font-size: 13.5px;
 }
 
-th{
+th {
     background: #eee;
 }
 
-@media screen and (min-width:320px){
-    th, td {
-        font-size: 50%;
-    }
-}
 
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) {
     th, td {
         font-size: 100%;
     }
+    .info-stats{
+        margin: 2px 2%
+    }
+    table {
+        border: 1px solid #000;
+    }
 }
-
 
 @media screen and (min-width:1024px) {
     .champion-info-img {
         width: 40%;
         float: left;
     }
-    .champ-descrip{
-        padding-top: 2em;
-    }
+
 }
 
 @media screen and (min-width: 1440px) {
-    .champ-descrip{
+    .champ-descrip {
         padding-top: 1em;
     }
 }

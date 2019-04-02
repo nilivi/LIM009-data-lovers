@@ -8,17 +8,16 @@ const minNumber = document.getElementById('min-number');
 const maxNumber = document.getElementById('max-number');
 const minHp = document.getElementById('hp-min');
 const maxHp = document.getElementById('hp-max');
-const minAd = document.getElementById('ad-min');
-const maxAd = document.getElementById('ad-max');
+const minAd = document.getElementById('adchamp-min');
+const maxAd = document.getElementById('adchamp-max');
 const welcomePage = document.getElementById('welcome-pg');
 const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
 // const championsCard = document.getElementById('card');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
+const navFilterAndSearch = document.getElementById('nav-filter-search');
 const btnSearch = document.getElementById('btn-search');
-
-
 const btnFilterSort = document.getElementById('btn-filter-sort');
 const asideStats = document.getElementById('aside');
 
@@ -49,6 +48,7 @@ btnChamps.addEventListener('click', () => {
   championsPage.classList.remove('hide');
   championsListElement.classList.remove('hide');
   infoChampion.classList.add('hide');
+  navFilterAndSearch.classList.remove('hide');
   sortChampions.value = 'az';
   selectRoles.value = 'default';
   minNumber.value = 0;
@@ -58,10 +58,11 @@ btnChamps.addEventListener('click', () => {
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
 
-function funcHideAndShow() {
+function funcHideAndShow() { 
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
+  navFilterAndSearch.classList.remove('hide');
 }
 
 btnFilterSort.addEventListener('click', funcHideAside);
@@ -97,6 +98,7 @@ const printCardsOfChampions = (arrChampions) => {
   });
 };
 
+
 const printMainInfo = (div) => {
   const printName = div.querySelector('[name=\'champs\']');
   printName.addEventListener('click', () => {
@@ -121,16 +123,16 @@ const printMainInfo = (div) => {
     </ul>
     </section>
     <section class="info-stats">
-    <div class="champ-descrip">Descripción:${obj[1].blurb}</div>
-    <h2 class="stat-title"> Estadísticas </h2>
+    <div class="champ-descrip">Description:${obj[1].blurb}</div>
+    <h2 class="stat-title"> Statistics </h2>
     <table class="table-stat">
     <tr>
       <th>HP</th>
       <th>MP</th>
       <th>Armor</th>
       <th>AD</th>
-      <th>HPregen</th>
-      <th>MPregen</th>
+      <th>HP reg</th>
+      <th>MP reg</th>
     </tr>
     <tr>
       <td>${obj[1].stats.hp} (+${obj[1].stats.hpperlevel} por nivel) </td>
@@ -151,6 +153,8 @@ const printMainInfo = (div) => {
     });
     championsListElement.classList.add('hide');
     infoChampion.classList.remove('hide');
+    navFilterAndSearch.classList.add('hide');
+    asideStats.classList.add('hide');
   });
 };
 
