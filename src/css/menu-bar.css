@@ -77,9 +77,7 @@ ul li {
     width: 100%;
     position: fixed;
   }
-  ul {
-    float: right;
-  }
+  
   ul li {
     padding: 0.2em;
     margin: 0 7px;
