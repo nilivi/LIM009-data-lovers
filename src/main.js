@@ -52,7 +52,7 @@ btnChamps.addEventListener('click', () => {
   sortChampions.value = 'az';
   selectRoles.value = 'default';
   minNumber.value = 0;
-  maxNumber.value = 0;
+  maxNumber.value = 500;
 });
 
 btnInit.addEventListener('click', funcHideAndShow);
@@ -129,8 +129,8 @@ const printMainInfo = (div) => {
       <th>MP</th>
       <th>Armor</th>
       <th>AD</th>
-      <th>HP regen</th>
-      <th>MP regen</th>
+      <th>HPregen</th>
+      <th>MPregen</th>
     </tr>
     <tr>
       <td>${obj[1].stats.hp} (+${obj[1].stats.hpperlevel} por nivel) </td>
