@@ -34,7 +34,7 @@ white-space: nowrap;
 #welcome-pg {
   background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
   position: relative;
-  top: 220px;
+  /* top: 220px; */
   height: 100vh;
   width: auto;
   padding:0
@@ -58,14 +58,14 @@ white-space: nowrap;
   font-weight: bold;
 }
 
-.bg-img {
+/* .bg-img {
   background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
   border-top: 8px solid transparent;
   border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
   border-image-slice: 2;
   position: absolute;
   height: 100vh;
-}
+} */
 
 @media screen and (min-width:320px) {
   #welcome-pg{
@@ -146,9 +146,7 @@ white-space: nowrap;
     overflow-y: hidden
     /* height: 100vh; */
   }
-  .logo-img {
-    width: 50%;
-  }
+  
   .intro-margin {
     margin: 5% 0;
   }
