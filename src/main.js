@@ -42,7 +42,7 @@ btnHome.addEventListener('click', () => {
   infoChampion.classList.add('hide');
 });
 
-btnChamps.addEventListener('click', () => { 
+btnChamps.addEventListener('click', () => {  
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');

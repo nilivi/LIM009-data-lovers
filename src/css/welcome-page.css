@@ -11,18 +11,23 @@ video {
   opacity: 1;
 }
 
+.video-tut {
+  margin-bottom: 2em;
+}
+
 .tut-pg {
   height: 80vh;
+  text-align: center;
 }
 
 .btn-init {
   background-color: #E71D36 !important;
   box-shadow: 0 6px rgba(231, 29, 53, 0.657);
   border-radius: 30px;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   color: #ffffff !important;
-  padding: 27px 20px 20px 20px!important;
+  padding: 20px!important;
   position: relative;
   text-decoration: none;
   border: none;
@@ -50,6 +55,7 @@ video {
   width: 100%;
   transform: translate(-50%, -50%);
   font-size: 18px;
+  padding: 0 15px
 }
 
 .center-content {
@@ -62,9 +68,9 @@ video {
   padding-top: 8%;
 } */
 
-.btn-init {
+/* .btn-init {
   text-align: center;
-}
+} */
 
 .intro-margin {
   margin: 10% 0;
@@ -100,13 +106,16 @@ video {
 
 @media screen and (min-width: 768px) {
   .center-content {
-    padding-top: 13%;
+    padding-top: 10%;
   }
   .logo-img {
-    width: 80%;
+    width: 60%;
   }
   #welcome-pg {
     max-height: 100%;
+  }
+  .welcome-text {
+  font-size:20px;
   }
   .video-tut {
     width: 80%;
@@ -120,6 +129,10 @@ video {
     top: 0;
     margin-bottom: 5%;
   }
+  .intro-margin {
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -127,15 +140,15 @@ video {
     padding-top: 0;
   }
   .welcome-text {
-    top: 35%;
+    top: 50%;
   }
   #welcome-pg {
     top: 50%;
     height: calc(100vh);
     background-image: none;
-    overflow: hidden; /*Sirve para no mostrar img demàs del contenido del section*/
+    overflow: hidden;
+    /*Sirve para no mostrar img demàs del contenido del section*/
   }
-  
   video {
     position: relative;
     display: block;
@@ -149,10 +162,14 @@ video {
     height: 60%;
     width: 55%;
     float: left;
+    margin-right: 8%;
   }
   #btn-tut {
     display: inline-block;
     margin-top: 15%;
+  }
+  .btn-init {
+    font-size: 20px;
   }
   .intro-margin {
     margin: 5% 0;
@@ -169,16 +186,19 @@ video {
   .logo-img {
     width: 35%;
   }
-  #btn-tut{
+  #btn-tut {
     top: 10%;
   }
-.tut-pg{
-  height: 80vh;
-}
+  .tut-pg {
+    height: 80vh;
+  }
+  .welcome-text{
+    font-size: 25px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  #welcome-text {
+  .welcome-text {
     height: 50%;
   }
   /* .center-content {
