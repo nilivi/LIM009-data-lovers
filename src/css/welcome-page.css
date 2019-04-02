@@ -10,7 +10,23 @@ video {
   display: none;
   opacity: 1;
 }
-
+.tut-pg{
+  height: 100vh;
+}
+.btn-init{
+background-color: #E71D36 !important;
+box-shadow: 0 6px rgba(231, 29, 53, 0.657);
+border-radius: 30px;
+font-size: 24px;
+color: #ffffff !important;
+padding: 27px 20px 20px 20px!important;
+position: relative;
+font-family: BeaufortW01-Bold;
+text-decoration: none;
+border: none;
+display: inline-block;
+white-space: nowrap;
+}
 .logo-img {
   width: 60%;
 }
@@ -19,13 +35,13 @@ video {
   background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
   position: relative;
   top: 220px;
-  height: 150vh;
+  height: 100vh;
   width: auto;
   padding:0
 }
 .welcome-text{
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
@@ -42,16 +58,14 @@ video {
   font-weight: bold;
 }
 
-.bg-img {
+/* .bg-img {
   background-image: url("https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png");
   border-top: 8px solid transparent;
   border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
   border-image-slice: 2;
   position: absolute;
-  /* top: 100vh;  */
   height: 100vh;
-  /* width: auto; */
-}
+} */
 
 @media screen and (min-width:470px) {
   .center-content {
@@ -69,16 +83,32 @@ video {
     padding-top: 13%;
   }
   .logo-img {
-    width: 45%;
+    width: 50%;
+  }
+  #welcome-pg {
+  top:55px;
+  max-height:100%;
+  }
+  iframe{
+    width: 60%;
+    height: 50%;
+    float: left;
+    position: relative;
+    left:25px;
+  }
+  #btn-tut{
+    display:inline-block;
+    position: relative;
+    top: 280px;
   }
 }
 
 @media screen and (min-width: 720px) {
   .center-content {
-    padding-top: 8%;
+    padding-top: 5%;
   }
   .logo-img {
-    width: 35%;
+    width: 80%;
   }
   #welcome-pg {
     top: 50%;
@@ -89,6 +119,9 @@ video {
     display: block;
     height:auto
     /* width:100% */
+  }
+  #btn-tut{
+    top: 150px;
   }
 }
 
@@ -108,7 +141,7 @@ video {
     /* height: 100vh; */
   }
   .logo-img {
-    width: 25%;
+    width: 50%;
   }
   .intro-margin {
     margin: 5% 0;

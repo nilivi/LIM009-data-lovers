@@ -10,7 +10,9 @@
 
 <body>
   <nav class="nav-bar" id="nav-bar">
-    <h1 class="head-nav">LOGO-WEBSITE</h1>
+    <div class="nav-main">
+      <h1 class="head-nav">LeagueFic</h1>
+    </div>  
     <div class="nav-menu">
       <ul>
         <li><button id="btn-home" class="btn-nav">Inicio</button></li>
@@ -20,32 +22,28 @@
     </div>
   </nav>
 
-  <section class="container total-screen center-content" id="welcome-pg">
-    <video id="hero-vid"  autoplay="autoplay" loop="loop">
+  <section class="container  center-content" id="welcome-pg">
+    <video id="hero-vid"  autoplay="autoplay" loop="loop" muted ="muted">
       <source
         src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_ES/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/vid/hero-video.mp4"
         type="video/mp4" />
     </video>
     <div class="welcome-text">
-      <img class="logo-img" src="https://bit.ly/2FseCUF" alt="Logo League of Legends"/>
-      <p class="intro-margin">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum deserunt ipsam
-        repellendus nisi, provident
-        pariatur. Laborum velit, tempora ipsum sapiente nulla magnam rem unde? Dignissimos nisi sed dolorum
-        culpa
-        saepe?</p>
-      <button class="btn-init" id="btn-init">Descubre a tus campeones</button>
+      <img class="logo-img" src="assets/lol-white-logo.png" alt="Logo League of Legends"/>
+      <p class="intro-margin">This is what you need to become a better LOL player</p>
+      <button class="btn-init" id="btn-init">GO TO CHAMPIONS</button>
     </div>
   </section>
-  <section class="container total-screen bg-img center-content" id="tut-pg">
-    <h2>¡Mira este video y comienza a jugar!</h2>
+  <section class="container  bg-img center-content tut-pg" id="tut-pg">
+    <h2>Look at this video and start to play!</h2>
     <iframe class="intro-margin video-tut" src="https://www.youtube.com/embed/WWa5uAzYDkQ"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
     </iframe>
-    <button class="btn-init" id="btn-tut">Descubre a tus campeones</button>
+    <button class="btn-init" id="btn-tut">GO TO CHAMPIONS</button>
   </section>
 
-  <main class="container total-screen hide" id="champions-pg">
-    <header class="navbar navbar-inverse">
+  <main class="container  hide" id="champions-pg">
+    <header class="navbar-inverse">
       <div class="nav-stats">
         <button id="btn-filter-sort" class="btn-champions">Ordenar y filtrar</button>
       </div>
@@ -88,6 +86,7 @@
           <p class="stat-value"> AD min: <span id="ad-min"></span></p>
           <p class="stat-value"> AD max: <span id="ad-max"></span></p>
         </div>
+        <button type="reset">Reset</button>
       </form>
     </aside>
     <h2 class="title">CAMPEONES</h2>

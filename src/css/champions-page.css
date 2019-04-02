@@ -1,9 +1,8 @@
 #champions-pg {
-    background-image: url(https://universe.leagueoflegends.com/images/latestBg_Wallpaper.png);
-    border-top: 8px solid transparent;
-    background-attachment: fixed;
+    background-color: white;
     width: auto;
-} 
+}
+
 .card {
     width: 100%;
     margin: 1.5em 5%;
@@ -17,7 +16,27 @@
 .champions {
     display: flex;
     flex-flow: wrap;
-    color: white;
+    color: #261F27;
+}
+
+main, nav {
+    overflow: hidden;
+    background-color: #23231A;
+}
+
+.nav-area {
+    display: block;
+    padding: 5%;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-left: 10%;
+}
+
+aside input {
+    width: 100px;
 }
 
 @media screen and (min-width:450px) {
@@ -28,15 +47,58 @@
     .champion-img {
         width: 100%;
     }
-    .champions{
+    .champions {
         justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
-@media screen and (min-width:630px){
-    
-    .navbar{
-        padding-top: 55px;
+@media screen and (min-width:630px) {
+    .aside {
+        float: left;
+        height: 100vh;
+        width: 25%;
+        background-color: #34322E;
+        color: #DADDD8;
+        font-size: 20px;
+        text-align: center;
+        font-style: italic;
+        position: relative;
+        top: 55px;
+        left: 0px;
+    }
+    .champions {
+        top: 110px;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0;
+        padding: 2%;
+        overflow: scroll;
+        height: calc(75vh);
+    }
+    .title {
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+        color: whitesmoke;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        color:#261F27;
+    }
+    .navbar-inverse {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #222;
+        border-color: #080808;
+        font-size: 25px;
+        color: whitesmoke;
+        position: sticky;
+        top: 55px;
+        height: 55px;
+        padding: 0.5em;
     }
 }
 

@@ -113,11 +113,11 @@ const printMainInfo = (div) => {
     <div class="champion-info-name">${obj[1].name}</div>
     <div class="champion-info-rol">Rol: ${obj[1].tags}</div>
     <div class="champ-info-">
-    <ul>
-    <il>AD-attack: ${obj[1].info.attack}</li>
-    <il>AP-magic: ${obj[1].info.magic}</li>
-    <il>DEF-defense: ${obj[1].info.defense}</li>
-    <il>DIF-difficulty: ${obj[1].info.difficulty}</li>
+    <ul class="info-general">
+    <li>AD-attack: ${obj[1].info.attack}</li>
+    <li>AP-magic: ${obj[1].info.magic}</li>
+    <li>DEF-defense: ${obj[1].info.defense}</li>
+    <li>DIF-difficulty: ${obj[1].info.difficulty}</li>
     </ul>
     </section>
     <section class="info-stats">

@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Quattrocento');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,800i');
 @import url(menu-bar.css);
 @import url(welcome-page.css);
 @import url(champions-page.css);
 @import url(champions-info.css);
+
+/* img escudo https://universe.leagueoflegends.com/esimages/content_type_icon_champion__3nwJQ.png */
+
 
 * {
   margin: 0;
@@ -25,20 +29,10 @@ body {
   margin: auto;
 }
 
-.btn-init {
-  font-family: DIN Next, serif;
-  font-size: 1.2rem;
-  font-stretch: condensed;
-  cursor: pointer;
-  width: 250px;
-  background-color: #363537;
-  color:#BEBBBB;
-}
-
-h2{
+section h2{
 text-align: center;
 margin: 1em;
-color: white;
+color: #011627;
 }
 
 footer {
@@ -46,7 +40,7 @@ footer {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  background-color: rgb(19, 18, 18);
+  background-color: #2A2A29;
   color: white;
   border-top: 1px solid rgba(245, 245, 245, 0.397);
 }
