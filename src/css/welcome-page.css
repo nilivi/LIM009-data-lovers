@@ -16,18 +16,18 @@ video {
 }
 
 .tut-pg {
-  height: 80vh;
+  height: 65vh;
   text-align: center;
 }
 
 .btn-init {
-  background-color: #E71D36 !important;
+  background-color: #E71D36;
   box-shadow: 0 6px rgba(231, 29, 53, 0.657);
   border-radius: 30px;
   font-size: 15px;
   font-weight: bold;
-  color: #ffffff !important;
-  padding: 20px!important;
+  color: #ffffff ;
+  padding: 20px;
   position: relative;
   text-decoration: none;
   border: none;
@@ -43,7 +43,7 @@ video {
   background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
   position: relative;
   top: 0;
-  height: 100vh;
+  height: 65vh;
   width: auto;
   padding: 0
 }
@@ -112,10 +112,10 @@ video {
     width: 60%;
   }
   #welcome-pg {
-    max-height: 100%;
+    height: 80vh;
   }
   .welcome-text {
-  font-size:20px;
+    font-size: 20px;
   }
   .video-tut {
     width: 80%;
@@ -140,14 +140,17 @@ video {
     padding-top: 0;
   }
   .welcome-text {
-    top: 50%;
+    top: 40%;
   }
   #welcome-pg {
     top: 50%;
-    height: calc(100vh);
+    height: 80vh;
     background-image: none;
     overflow: hidden;
     /*Sirve para no mostrar img demàs del contenido del section*/
+  }
+  .tut-pg{
+    height: 65vh;
   }
   video {
     position: relative;
@@ -181,10 +184,10 @@ video {
 
 @media screen and (min-width: 1250px) {
   .center-content {
-    padding-top: 8%;
+    padding-top: 0;
   }
   .logo-img {
-    width: 35%;
+    width: 30%;
   }
   #btn-tut {
     top: 10%;
@@ -192,8 +195,12 @@ video {
   .tut-pg {
     height: 80vh;
   }
-  .welcome-text{
+  .welcome-text {
+    top: 50%;
     font-size: 25px;
+  }
+  #welcome-pg{
+    height: 100vh;
   }
 }
 

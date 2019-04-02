@@ -42,6 +42,7 @@
 .info-stats {
     display: block;
 }
+
 table {
     width: 100%;
 }
@@ -61,12 +62,11 @@ th {
     background: #eee;
 }
 
-
 @media screen and (min-width:768px) {
     th, td {
         font-size: 100%;
     }
-    .info-stats{
+    .info-stats {
         margin: 2px 2%
     }
     table {
@@ -79,7 +79,6 @@ th {
         width: 40%;
         float: left;
     }
-
 }
 
 @media screen and (min-width: 1440px) {

@@ -13,7 +13,6 @@ const maxAd = document.getElementById('adchamp-max');
 const welcomePage = document.getElementById('welcome-pg');
 const tutPage = document.getElementById('tut-pg');
 const championsPage = document.getElementById('champions-pg');
-// const championsCard = document.getElementById('card');
 const btnInit = document.getElementById('btn-init');
 const btnTut = document.getElementById('btn-tut');
 const navFilterAndSearch = document.getElementById('nav-filter-search');
@@ -25,10 +24,9 @@ const asideStats = document.getElementById('aside');
 const search = document.getElementById('search');
 const btnHome = document.getElementById('btn-home');
 const btnChamps = document.getElementById('btn-champs');
-// const btnContact = document.getElementById('btn-contact');
 const infoChampion = document.getElementById('info-champions');
 
-btnSearch.addEventListener('click', function() {
+btnSearch.addEventListener('click', () => {
   const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
     return obj.id === search.value;
   });
@@ -42,7 +40,7 @@ btnHome.addEventListener('click', () => {
   infoChampion.classList.add('hide');
 });
 
-btnChamps.addEventListener('click', () => {  
+btnChamps.addEventListener('click', () => {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
@@ -53,12 +51,13 @@ btnChamps.addEventListener('click', () => {
   selectRoles.value = 'default';
   minNumber.value = 0;
   maxNumber.value = 500;
+  printCardsOfChampions(arrNameAndImageOfChampions)
 });
 
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
 
-function funcHideAndShow() { 
+function funcHideAndShow() {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
@@ -162,19 +161,15 @@ window.onload = () => {
   funcFilterAndSort();
 };
 
+selectRoles.addEventListener('input', funcFilterAndSort);
+sortChampions.addEventListener('input', funcFilterAndSort);
 
-// ARROW FUNCTIONS
-
-selectRoles.addEventListener('change', funcFilterAndSort);
-sortChampions.addEventListener('change', funcFilterAndSort);
-
-function funcFilterAndSort() {// [{},{},{},...,{}] (una función que filtre por roles y ordene los campeones de la a-z, z-a)
-  let newChampionsArr = arrNameAndImageOfChampions;// todos los campeones en un array
+function funcFilterAndSort() {
+  let newChampionsArr = arrNameAndImageOfChampions;
   if (selectRoles.value !== 'default') {
-    newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions);// me devuelve un array de objetos con los campeones filtrados por rol
-    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr);// me devuelve un array de objetos ordenando de la a-z/z-a con los datos de un rol ya filtrado
-    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr);// me devuelve un array de objetos ordenando lo ordenado
-    newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value); // me devuelve un array de objetos con max y min maná.
+    newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions);
+    newChampionsArr = lol.sortChampionsCards(sortChampions.value, newChampionsArr);
+    newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value);
     printCardsOfChampions(newChampionsArr);
     statOfChamps(newChampionsArr);
   }
