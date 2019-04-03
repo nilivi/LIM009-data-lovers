@@ -15,7 +15,7 @@ video {
 }
 
 .tut-pg {
-  height: 65vh;
+  height: 70vh;
   text-align: center;
 }
 
@@ -42,7 +42,7 @@ video {
   background-image: url(https://image.redbull.com/rbcom/010/2017-01-03/1331837749223_2/0100/0/1/la-historia-de-los-campos-de-la-jusitica.JPG);
   position: relative;
   top: 0;
-  height: 65vh;
+  height: 85vh;
   width: auto;
   padding: 0
 }
@@ -123,8 +123,6 @@ video {
     height: auto;
     top: 55px;
     width: 100%;
-    /* margin-bottom: -150px; */
-    /* max-height: 100%; */
   }
   .video-tut {
     height: 60%;
@@ -173,24 +171,16 @@ video {
   .welcome-text {
     height: 50%;
   }
-  /* .center-content {
-    padding-top: 5%;
-  } */
   .logo-img {
     width: 40%;
   }
   video {
-    /* display: block;
-    width:100%;
-    overflow: hidden; */
     display: flex;
     width: 100%;
-    /* height: 100vh; */
     min-height: 500px;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: hidden
-    /* height: 100vh; */
   }
   .intro-margin {
     margin: 5% 0;
