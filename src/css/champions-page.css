@@ -155,8 +155,17 @@ aside input, aside select {
     }
 }
 
+@media screen and (min-width:1250px) {
+    .nav-area {
+        font-size: 20px;
+        margin: 3%;
+        padding: 2%;
+    }
+
+}
 @media screen and (min-width:1440px) {
     .nav-area {
         font-size: 25px;
     }
+
 }
