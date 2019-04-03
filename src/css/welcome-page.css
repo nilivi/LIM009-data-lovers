@@ -5,7 +5,6 @@ video {
   width: auto;
   overflow: hidden;
   height: 100%;
-  /* z-index: -10; */
   visibility: visible;
   display: none;
   opacity: 1;
@@ -64,45 +63,11 @@ video {
   align-content: space-between;
 }
 
-/* .center-content {
-  padding-top: 8%;
-} */
-
-/* .btn-init {
-  text-align: center;
-} */
-
 .intro-margin {
   margin: 10% 0;
   color: white;
   font-weight: bold;
 }
-
-/* .bg-img {
-  background-image: url("https://as01.epimg.net/esports/imagenes/2017/09/15/league_of_legends/1505467062_692763_1505472317_noticia_normal.jpg");
-  border-top: 8px solid transparent;
-  border-image: linear-gradient(to right, #836323 0, #c3a568 51%, #836323 100%);
-  border-image-slice: 2;
-  position: absolute;
-  height: 100vh;
-} */
-
-/* @media screen and (min-width:320px) {
-  #welcome-pg{
-    top:0;
-  }
-} */
-
-/* @media screen and (min-width:470px) {
-  .center-content {
-    padding-top: 8%;
-    text-align: center;
-    align-content: space-between;
-  }
-  .video-tut .btn-init {
-    text-align: center;
-  }
-} */
 
 @media screen and (min-width: 768px) {
   .center-content {
@@ -231,9 +196,3 @@ video {
     margin: 5% 0;
   }
 }
-
-/* @media screen and (min-width: 1024px) {
-  .bg-img{
-    top: 500px;
-  }
-} */
