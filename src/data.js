@@ -1,39 +1,35 @@
 window.lol = {
   getNameAndImageOfChampion: (arrChampions) => {
     return arrChampions.map((obj) => {
-      // console.log(obj[1].tags.toString().toLowerCase());
       return { image: obj[1].splash, name: obj[1].name, rol: obj[1].tags, id: obj[1].id, attack: obj[1].stats.attackdamage, mana: obj[1].stats.mp, hp: obj[1].stats.hp };
     });
   },
   filterChampionsRoles: (rol, arrChampions) => {
-    const newArray = arrChampions.map((obj) => {
-      return obj;
+    const newArray = arrChampions.map((elem) => {
+      return elem;
     });
-    const abc = newArray.filter((championRol) => {
+    const arrFiltered = newArray.filter((championRol) => {
       return championRol.rol[0] === rol || championRol.rol[1] === rol;
-    })
-      .map((obj) => {
-        return obj;
-      });
-    return abc;
+    });
+    return arrFiltered;
   },
   filterChampionsMana: (arr, minNumber, maxNumber) => {
-    const abc = arr.filter((obj) => {
-      if (minNumber <= obj.mana && obj.mana <= maxNumber) {
-        return obj.mana;
+    const arrFiltered = arr.filter((elem) => {
+      if (minNumber <= elem.mana && elem.mana <= maxNumber) {
+        return elem.mana;
       }
     });
-    return abc;
+    return arrFiltered;
   },
-  statOfChampions: (arr, est, value) => {
+  statOfChampions: (arr, caract, value) => {
     const newArray = arr.map((statistic) => {
-      if (est === 'ad') {
+      if (caract === 'ad') {
         return statistic.attack;
-      } else if (est === 'hp') {
+      } else if (caract === 'hp') {
         return statistic.hp;
       }
     });
-    const array = newArray.reduce((result, stat) => {
+    const number = newArray.reduce((result, stat) => { //(valor previo, valor actual)
       if (value === 'max' && result < stat) {
         result = stat;
       } else if (value === 'min' && result > stat) {
@@ -41,14 +37,14 @@ window.lol = {
       }
       return result;
     });
-    return array;
+    return number;
   },
-  sortChampionsCards: (ordenCampeones, arr) => {
-    const nuevoarray = arr.map(function(objCampeon) {
+  sortChampionsCards: (sortChamps, arr) => {
+    const nuevoarray = arr.map(function (objCampeon) {
       return objCampeon;
     });
-    if (ordenCampeones === 'az') {
-      nuevoarray.sort(function(firstName, secondName) {
+    if (sortChamps === 'az') {
+      nuevoarray.sort(function (firstName, secondName) {
         if (firstName.name > secondName.name) {
           return 1;
         } else if (firstName.name < secondName.name) {
@@ -57,7 +53,7 @@ window.lol = {
           return 0;
         }
       });
-    } else if (ordenCampeones === 'za') {
+    } else if (sortChamps === 'za') {
       nuevoarray.sort((firstName, secondName) => {
         if (firstName.name > secondName.name) {
           return -1;

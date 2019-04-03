@@ -51,7 +51,7 @@ btnChamps.addEventListener('click', () => {
   selectRoles.value = 'default';
   minNumber.value = 0;
   maxNumber.value = 500;
-  printCardsOfChampions(arrNameAndImageOfChampions)
+  printCardsOfChampions(arrNameAndImageOfChampions);
 });
 
 btnInit.addEventListener('click', funcHideAndShow);
