@@ -29,7 +29,7 @@ window.lol = {
         return statistic.hp;
       }
     });
-    const number = newArray.reduce((result, stat) => { //(valor previo, valor actual)
+    const number = newArray.reduce((result, stat) => { // (valor previo, valor actual)
       if (value === 'max' && result < stat) {
         result = stat;
       } else if (value === 'min' && result > stat) {
@@ -40,11 +40,11 @@ window.lol = {
     return number;
   },
   sortChampionsCards: (sortChamps, arr) => {
-    const nuevoarray = arr.map(function (objCampeon) {
+    const nuevoarray = arr.map(function(objCampeon) {
       return objCampeon;
     });
     if (sortChamps === 'az') {
-      nuevoarray.sort(function (firstName, secondName) {
+      nuevoarray.sort(function(firstName, secondName) {
         if (firstName.name > secondName.name) {
           return 1;
         } else if (firstName.name < secondName.name) {

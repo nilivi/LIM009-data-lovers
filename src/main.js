@@ -1,8 +1,8 @@
 // Llamando a los nombres de cada campeón
 const listOfChampions = Object.entries(LOL.data);
 const arrNameAndImageOfChampions = lol.getNameAndImageOfChampion(listOfChampions);
-
-const selectRoles = document.getElementById('rol');//
+// Elementos del DOM
+const selectRoles = document.getElementById('rol');
 const sortChampions = document.getElementById('sort');
 const minNumber = document.getElementById('min-number');
 const maxNumber = document.getElementById('max-number');
@@ -19,63 +19,13 @@ const navFilterAndSearch = document.getElementById('nav-filter-search');
 const btnSearch = document.getElementById('btn-search');
 const btnFilterSort = document.getElementById('btn-filter-sort');
 const asideStats = document.getElementById('aside');
-
-
 const search = document.getElementById('search');
 const btnHome = document.getElementById('btn-home');
 const btnChamps = document.getElementById('btn-champs');
-const infoChampion = document.getElementById('info-champions');
-
-btnSearch.addEventListener('click', () => {
-  const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
-    return obj.id === search.value;
-  });
-  printCardsOfChampions(searchChampions);
-});
-
-btnHome.addEventListener('click', () => {
-  welcomePage.classList.remove('hide');
-  tutPage.classList.remove('hide');
-  championsPage.classList.add('hide');
-  infoChampion.classList.add('hide');
-});
-
-btnChamps.addEventListener('click', () => {
-  welcomePage.classList.add('hide');
-  tutPage.classList.add('hide');
-  championsPage.classList.remove('hide');
-  championsListElement.classList.remove('hide');
-  infoChampion.classList.add('hide');
-  navFilterAndSearch.classList.remove('hide');
-  sortChampions.value = 'az';
-  selectRoles.value = 'default';
-  minNumber.value = 0;
-  maxNumber.value = 500;
-  printCardsOfChampions(arrNameAndImageOfChampions);
-});
-
-btnInit.addEventListener('click', funcHideAndShow);
-btnTut.addEventListener('click', funcHideAndShow);
-
-function funcHideAndShow() {
-  welcomePage.classList.add('hide');
-  tutPage.classList.add('hide');
-  championsPage.classList.remove('hide');
-  navFilterAndSearch.classList.remove('hide');
-}
-
-btnFilterSort.addEventListener('click', funcHideAside);
-
-function funcHideAside() {
-  asideStats.classList.toggle('hide');
-}
-
-maxNumber.addEventListener('change', funcFilterAndSort);
-maxNumber.addEventListener('keyup', funcFilterAndSort);
-minNumber.addEventListener('change', funcFilterAndSort);
-minNumber.addEventListener('keyup', funcFilterAndSort);
 
 const championsListElement = document.getElementById('champions');
+const infoChampion = document.getElementById('info-champions');
+
 const printCardsOfChampions = (arrChampions) => {
   championsListElement.innerHTML = '';
   arrChampions.forEach((obj) => {
@@ -96,7 +46,6 @@ const printCardsOfChampions = (arrChampions) => {
     printMainInfo(div);
   });
 };
-
 
 const printMainInfo = (div) => {
   const printName = div.querySelector('[name=\'champs\']');
@@ -161,10 +110,14 @@ window.onload = () => {
   funcFilterAndSort();
 };
 
-selectRoles.addEventListener('input', funcFilterAndSort);
-sortChampions.addEventListener('input', funcFilterAndSort);
+const statOfChamps = (arr) => {
+  minHp.innerHTML = lol.statOfChampions(arr, 'hp', 'min');
+  maxHp.innerHTML = lol.statOfChampions(arr, 'hp', 'max');
+  minAd.innerHTML = lol.statOfChampions(arr, 'ad', 'min');
+  maxAd.innerHTML = lol.statOfChampions(arr, 'ad', 'max');
+};
 
-function funcFilterAndSort() {
+const funcFilterAndSort = () => {
   let newChampionsArr = arrNameAndImageOfChampions;
   if (selectRoles.value !== 'default') {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions);
@@ -177,12 +130,56 @@ function funcFilterAndSort() {
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value);
   printCardsOfChampions(newChampionsArr);
   statOfChamps(newChampionsArr);
-}
+};
 
-function statOfChamps(arr) {
-  minHp.innerHTML = lol.statOfChampions(arr, 'hp', 'min');
-  maxHp.innerHTML = lol.statOfChampions(arr, 'hp', 'max');
-  minAd.innerHTML = lol.statOfChampions(arr, 'ad', 'min');
-  maxAd.innerHTML = lol.statOfChampions(arr, 'ad', 'max');
-}
+maxNumber.addEventListener('change', funcFilterAndSort);
+maxNumber.addEventListener('keyup', funcFilterAndSort);
+minNumber.addEventListener('change', funcFilterAndSort);
+minNumber.addEventListener('keyup', funcFilterAndSort);
+
+selectRoles.addEventListener('input', funcFilterAndSort);
+sortChampions.addEventListener('input', funcFilterAndSort);
+
+btnSearch.addEventListener('click', () => {
+  const searchChampions = arrNameAndImageOfChampions.filter((obj) => {
+    return obj.id === search.value;
+  });
+  printCardsOfChampions(searchChampions);
+});
+
+btnHome.addEventListener('click', () => {
+  welcomePage.classList.remove('hide');
+  tutPage.classList.remove('hide');
+  championsPage.classList.add('hide');
+  infoChampion.classList.add('hide');
+});
+
+btnChamps.addEventListener('click', () => {
+  welcomePage.classList.add('hide');
+  tutPage.classList.add('hide');
+  championsPage.classList.remove('hide');
+  championsListElement.classList.remove('hide');
+  infoChampion.classList.add('hide');
+  navFilterAndSearch.classList.remove('hide');
+  sortChampions.value = 'az';
+  selectRoles.value = 'default';
+  minNumber.value = 0;
+  maxNumber.value = 500;
+  printCardsOfChampions(arrNameAndImageOfChampions);
+});
+
+const funcHideAndShow = () => {
+  welcomePage.classList.add('hide');
+  tutPage.classList.add('hide');
+  championsPage.classList.remove('hide');
+  navFilterAndSearch.classList.remove('hide');
+};
+btnInit.addEventListener('click', funcHideAndShow);
+btnTut.addEventListener('click', funcHideAndShow);
+
+const funcHideAside = () => {
+  asideStats.classList.toggle('hide');
+};
+btnFilterSort.addEventListener('click', funcHideAside);
+
 
