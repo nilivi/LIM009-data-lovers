@@ -2,7 +2,7 @@ global.window = global;
 require('../src/data');
 
 describe('lol', () => {
-  const prueba = [
+  const arrChampions = [
     ['Aatrox',
       {
         version: '6.24.1',
@@ -204,7 +204,7 @@ describe('lol', () => {
       }
     ]
   ];
-  const pruebaDos = [
+  const arrChampionsReverse = [
     ['Alistar',
       {
         version: '6.24.1',
@@ -263,11 +263,11 @@ describe('lol', () => {
         name: 'Akali',
         title: 'the Fist of Shadow',
         img:
-        'https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png',
+          'https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png',
         splash:
-        'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg',
+          'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg',
         blurb:
-        'There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...',
+          'There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...',
         info: {
           attack: 5,
           defense: 3,
@@ -406,7 +406,7 @@ describe('lol', () => {
       }
     ]
   ];
-  const pruebaTres = [
+  const arrChampionsEqual = [
     ['Alistar-uno',
       {
         version: '6.24.1',
@@ -507,7 +507,7 @@ describe('lol', () => {
         }
       }
     ],
-    
+
   ];
   test('debería ser un objeto', () => {
     expect.objectContaining(lol);
@@ -517,7 +517,7 @@ describe('lol', () => {
       expect(typeof lol.getNameAndImageOfChampion).toBe('function');
     });
     test('debería dar un array con objetos', () => {
-      expect(lol.getNameAndImageOfChampion(prueba)).toEqual(
+      expect(lol.getNameAndImageOfChampion(arrChampions)).toEqual(
         [{
           attack: 60.376,
           hp: 537.8,
@@ -563,7 +563,7 @@ describe('lol', () => {
       expect(typeof lol.filterChampionsRoles).toBe('function');
     });
     test('debería devolver el array filtrado por rol', () => {
-      expect(lol.filterChampionsRoles('Tank', lol.getNameAndImageOfChampion(prueba))).toEqual(
+      expect(lol.filterChampionsRoles('Tank', lol.getNameAndImageOfChampion(arrChampions))).toEqual(
         [{
           attack: 60.376,
           hp: 537.8,
@@ -591,7 +591,7 @@ describe('lol', () => {
       expect(typeof lol.filterChampionsMana).toBe('function');
     });
     test('debería retornar el array filtrado segun rango de Mana', () => {
-      expect(lol.filterChampionsMana(lol.getNameAndImageOfChampion(prueba), 100, 300)).toEqual(
+      expect(lol.filterChampionsMana(lol.getNameAndImageOfChampion(arrChampions), 100, 300)).toEqual(
         [{
           attack: 60.376,
           hp: 537.8,
@@ -628,16 +628,16 @@ describe('lol', () => {
       expect(typeof lol.statOfChampions).toBe('function');
     });
     test('debería retornar el valor máximo del hp del campeon', () => {
-      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(prueba), 'hp', 'max')).toEqual(613.36);
+      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(arrChampions), 'hp', 'max')).toEqual(613.36);
     });
     test('debería retornar el valor mínimo del hp del campeon', () => {
-      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(prueba), 'hp', 'min')).toEqual(514.4);
+      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(arrChampions), 'hp', 'min')).toEqual(514.4);
     });
     test('debería retornar el valor máximo del ad del campeon', () => {
-      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(prueba), 'ad', 'max')).toEqual(61.1116);
+      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(arrChampions), 'ad', 'max')).toEqual(61.1116);
     });
     test('debería retornar el valor mínimo del hp del campeon', () => {
-      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(prueba), 'ad', 'min')).toEqual(53.04);
+      expect(lol.statOfChampions(lol.getNameAndImageOfChampion(arrChampions), 'ad', 'min')).toEqual(53.04);
     });
   });
   describe('lol.sortChampionsCards', () => {
@@ -645,7 +645,7 @@ describe('lol', () => {
       expect(typeof lol.sortChampionsCards).toBe('function');
     });
     test('debería retornar el array de campeones ordenado de a-z', () => {
-      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(prueba))).toEqual(
+      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(arrChampions))).toEqual(
         [{
           attack: 60.376,
           hp: 537.8,
@@ -686,7 +686,7 @@ describe('lol', () => {
       );
     });
     test('debería retornar el array de campeones ordenado de a-z', () => {
-      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(pruebaDos))).toEqual(
+      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(arrChampionsReverse))).toEqual(
         [{
           attack: 60.376,
           hp: 537.8,
@@ -727,7 +727,7 @@ describe('lol', () => {
       );
     });
     test('debería retornar el array de campeones ordenado de a-z', () => {
-      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(pruebaTres))).toEqual(
+      expect(lol.sortChampionsCards('az', lol.getNameAndImageOfChampion(arrChampionsEqual))).toEqual(
         [{
           attack: 61.1116,
           hp: 613.36,
@@ -749,7 +749,7 @@ describe('lol', () => {
       );
     });
     test('debería retornar el array de campeones ordenado de z-a', () => {
-      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(prueba))).toEqual(
+      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(arrChampions))).toEqual(
         [{
           attack: 61.1116,
           hp: 613.36,
@@ -790,7 +790,7 @@ describe('lol', () => {
       );
     });
     test('debería retornar el array de campeones ordenado de z-a', () => {
-      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(pruebaDos))).toEqual(
+      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(arrChampionsReverse))).toEqual(
         [{
           attack: 61.1116,
           hp: 613.36,
@@ -831,7 +831,7 @@ describe('lol', () => {
       );
     });
     test('debería retornar el array de campeones ordenado de z-a', () => {
-      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(pruebaTres))).toEqual(
+      expect(lol.sortChampionsCards('za', lol.getNameAndImageOfChampion(arrChampionsEqual))).toEqual(
         [{
           attack: 61.1116,
           hp: 613.36,

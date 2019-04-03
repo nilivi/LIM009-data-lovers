@@ -40,11 +40,11 @@ window.lol = {
     return number;
   },
   sortChampionsCards: (sortChamps, arr) => {
-    const nuevoarray = arr.map(function(objCampeon) {
+    const nuevoarray = arr.map(function (objCampeon) {
       return objCampeon;
     });
     if (sortChamps === 'az') {
-      nuevoarray.sort(function(firstName, secondName) {
+      nuevoarray.sort(function (firstName, secondName) {
         if (firstName.name > secondName.name) {
           return 1;
         } else if (firstName.name < secondName.name) {

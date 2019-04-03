@@ -19,9 +19,11 @@
     margin-bottom: 10px;
     padding: 1%;
 }
-.nav-stats{
+
+.nav-stats {
     margin-bottom: 10px;
 }
+
 .champion-img {
     width: 85%;
 }
@@ -107,7 +109,7 @@ aside input, aside select {
         overflow: scroll;
         height: 68vh;
     }
-    .champion-mp{
+    .champion-mp {
         font-size: 18px;
     }
     .title {
@@ -150,7 +152,7 @@ aside input, aside select {
         margin: 8%;
         font-size: 20px;
     }
-    .aside{
+    .aside {
         width: 25%;
     }
 }
@@ -161,11 +163,10 @@ aside input, aside select {
         margin: 3%;
         padding: 2%;
     }
-
 }
+
 @media screen and (min-width:1440px) {
     .nav-area {
         font-size: 25px;
     }
-
 }
