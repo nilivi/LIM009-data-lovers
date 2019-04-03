@@ -10,11 +10,6 @@
   display: none;
 }
 
-/* body{
-    background: url(http://s1.picswalls.com/wallpapers/2015/11/21/league-of-legends-high-definition_111244104_289.jpg);
-  
-  } */
-
 .title {
   font-size: 50px;
   text-align: center;
@@ -175,7 +170,3 @@ video {
   display: inline-block;
   width: 50%;
 }
-
-/* .intro-video{
-    frameborder: 0
-  } */
