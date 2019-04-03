@@ -115,9 +115,9 @@ const statOfChamps = (arr) => {
   maxHp.innerHTML = lol.statOfChampions(arr, 'hp', 'max');
   minAd.innerHTML = lol.statOfChampions(arr, 'ad', 'min');
   maxAd.innerHTML = lol.statOfChampions(arr, 'ad', 'max');
-}
+};
 
-const funcFilterAndSort = ()=> {
+const funcFilterAndSort = () => {
   let newChampionsArr = arrNameAndImageOfChampions;
   if (selectRoles.value !== 'default') {
     newChampionsArr = lol.filterChampionsRoles(selectRoles.value, arrNameAndImageOfChampions);
@@ -130,7 +130,7 @@ const funcFilterAndSort = ()=> {
   newChampionsArr = lol.filterChampionsMana(newChampionsArr, minNumber.value, maxNumber.value);
   printCardsOfChampions(newChampionsArr);
   statOfChamps(newChampionsArr);
-}
+};
 
 maxNumber.addEventListener('change', funcFilterAndSort);
 maxNumber.addEventListener('keyup', funcFilterAndSort);
@@ -168,20 +168,18 @@ btnChamps.addEventListener('click', () => {
   printCardsOfChampions(arrNameAndImageOfChampions);
 });
 
-const funcHideAndShow = ()=> {
+const funcHideAndShow = () => {
   welcomePage.classList.add('hide');
   tutPage.classList.add('hide');
   championsPage.classList.remove('hide');
   navFilterAndSearch.classList.remove('hide');
-}
+};
 btnInit.addEventListener('click', funcHideAndShow);
 btnTut.addEventListener('click', funcHideAndShow);
 
 const funcHideAside = () => {
   asideStats.classList.toggle('hide');
-}
+};
 btnFilterSort.addEventListener('click', funcHideAside);
-
-
 
 
