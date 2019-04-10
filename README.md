@@ -22,18 +22,35 @@ El problema del usuario es que desconoce -cierta- información de los Campeones 
 
     ![Pregunta 1 - encuesta](https://user-images.githubusercontent.com/47750982/55366517-bc32cf80-54ae-11e9-98b5-562b1ef82429.jpg)
 
+    En el gráfico anterior se puede observar el tiempo que tienen los usuarios jugando LOL. Se realizó ésta pregunta para poder saber si al público al que nos dirigíamos tenía experiencia o recién estaban comenzando a jugar LOL.
+
     ![Pregunta 2 - encuesta](https://user-images.githubusercontent.com/47750982/55366714-8c37fc00-54af-11e9-99a5-7fd8a4d3d990.jpg)
+
+    Ésta pregunta tenía como objetivo conocer cuáles son las características que el usuario toma en cuenta al momento de elegir a un campeón.    
+    En primer lugar que tienen en cuenta al elegir a un campeón a jugar por parte de los usuarios son sus habilidades, ésta información se tachó porque no se tenía información en la data que nos facilitaron.    
+    Así que se tomó en cuenta los roles de los campeones, la cual elegimos para poder hacer un filtro con cada rol y así el usuario podría elegir a un campeón de acuerdo al rol que desee.
 
     ![Pregunta 3 - encuesta](https://user-images.githubusercontent.com/47750982/55366770-d02b0100-54af-11e9-8bc1-793487865b01.jpg)
 
+    Ésta pregunta nos sirvió para poder obtener los datos más relevantes de un campeón, como HP, MP y Armor; las cuales fueron utilizadas para poder realizar una tabla con las características más importantes de un campeón.
+
     ![Pregunta 4 - encuesta](https://user-images.githubusercontent.com/47750982/55366852-25ffa900-54b0-11e9-8b6b-858cdde7fa9b.jpg)
+
+    Ésta pregunta nos ayudó para poder conocer y elegir el orden de los roles, al momento de filtrar a los campeones por rol.
 
     ![Pregunta 5 - encuesta](https://user-images.githubusercontent.com/47750982/55366911-62330980-54b0-11e9-91df-c1d21291e4f5.jpg)
 
-    * A partir de las respuestas que se obtuvo:
-        Historias de Usuarios.
-        Prototipado de Baja Calidad.
-        Prototipado de Alta Calidad (Test de Usabilidad).
+    Ésta pregunta nos ayudó para poder conocer si la información que teníamos en la data era importante para poder considerar en la página que teníamos que crear y el orden de éstas.
+
+    ![Pregunta 6 - encuesta](https://user-images.githubusercontent.com/47750982/55888137-79d75580-5b74-11e9-82bf-496cf1df84bf.jpg)
+
+    Los comentarios nos ayudaron para poder tener más ideas para poder crear la página web y que características debería contener.
+
+* A partir de las respuestas se realizaron:
+
+    - Historias de Usuarios.    
+    - Prototipado de Baja Calidad.    
+    - Prototipado de Alta Calidad (Test de Usabilidad).
     
 2. Historias de usuario (Definición de terminado, criterios de aceptación)
 
@@ -176,27 +193,65 @@ El problema del usuario es que desconoce -cierta- información de los Campeones 
 
 4. Prototipo de Alta Fidelidad:
 
+    **DESKTOP**
+
     * Pantalla de Inicio
 
-    ![Pantalla de inicio](https://user-images.githubusercontent.com/47750982/55370132-16d42780-54bf-11e9-8258-918f0310151f.jpg)
+    ![Pantalla de inicio](https://user-images.githubusercontent.com/47750982/55893937-d8a1cc80-5b7e-11e9-9bf9-bb2e380634b6.jpg)
 
     * Pantalla Tutorial
 
-    ![Pantalla de tutorial](https://user-images.githubusercontent.com/47750982/55370199-569b0f00-54bf-11e9-89e9-e24a1830c178.jpg)
+    ![Pantalla de tutorial](https://user-images.githubusercontent.com/47750982/55894084-19014a80-5b7f-11e9-9144-ee1a19ca1d5a.jpg)
+
 
     * Pantalla de Campeones
 
-    ![Pantalla de campeones](https://user-images.githubusercontent.com/47750982/55370246-7af6eb80-54bf-11e9-9e9f-f9b33dce7866.jpg)
+    ![Pantalla de campeones](https://user-images.githubusercontent.com/47750982/55894188-4817bc00-5b7f-11e9-857c-30874a0eea3f.jpg)
 
     * Información de Campeones
 
-    ![Campeones filtrados](https://user-images.githubusercontent.com/47750982/55370299-a5e13f80-54bf-11e9-88e8-ac340d7518c6.jpg)
+    ![Aatrox](https://user-images.githubusercontent.com/47750982/55894496-d429e380-5b7f-11e9-953e-319042e6c91c.jpg)
+
+    * Pantalla de Filtrado y Ordenado
+
+    ![Pantalla de Filtrado y Ordenado](https://user-images.githubusercontent.com/47750982/55894661-1f43f680-5b80-11e9-9144-4d25743645f6.jpg)
 
     * Pantalla de Contacto
 
-    ![Contacto](https://user-images.githubusercontent.com/47750982/55370382-f5c00680-54bf-11e9-9821-d19414d3c35d.jpg)
+    ![Contacto](https://user-images.githubusercontent.com/47750982/55894817-8497e780-5b80-11e9-986a-95d3003f42b1.jpg)
 
-    **Link en Zeplin** --> [Zeplin](https://app.zeplin.io/project/5c98023d9663d72519aa3a3c)
+    **Link en Figma** --> [Figma](https://www.figma.com/proto/aq7HMDvxBHbFXkyyWGrwI6/League-of-Legends-(Desktop)?scaling=scale-down)
+
+    **MOBILE**
+
+    * Pantalla de Inicio
+
+    ![Pantalla de bienvenida](https://user-images.githubusercontent.com/47750982/55899007-684c7880-5b89-11e9-84df-90d5cf9f619f.png)
+
+    * Pantalla Tutorial
+
+    ![Pantalla Tutorial](https://user-images.githubusercontent.com/47750982/55899087-9762ea00-5b89-11e9-90c9-cec685653668.png)
+
+    * Pantalla de Campeones
+
+    ![Pantalla de campeones](https://user-images.githubusercontent.com/47750982/55899303-0fc9ab00-5b8a-11e9-8a8e-e5cf8f257067.png)
+
+    * Información de Campeones
+
+    ![Aatrox](https://user-images.githubusercontent.com/47750982/55899493-8e264d00-5b8a-11e9-9682-49e0d666329c.png)
+    ![Aatrox Estadísticas](https://user-images.githubusercontent.com/47750982/55899575-c463cc80-5b8a-11e9-9449-d27861bc6806.png)
+
+    * Pantalla de Filtrado y Ordenado
+
+    ![Filtrado y Ordenado](https://user-images.githubusercontent.com/47750982/55899677-068d0e00-5b8b-11e9-944d-4af8e9d1f7ef.png)
+
+    * Pantalla de Contacto
+
+    ![Contacto](https://user-images.githubusercontent.com/47750982/55899754-320ff880-5b8b-11e9-9433-98fef19f3c82.png)
+
+    **Link en Figma** --> [Figma](https://www.figma.com/proto/JBRAnOufjoEuHaYDlroCTHBZ/League-of-Legends-(Mobile)?scaling=scale-down)
+
+ **Link en Zeplin** --> [Zeplin](https://app.zeplin.io/project/5c98023d9663d72519aa3a3c/dashboard)
 
 5. Test de Usabilidad:
 
