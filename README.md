@@ -255,25 +255,187 @@ El problema del usuario es que desconoce -cierta- información de los Campeones 
 
 5. Test de Usabilidad:
 
-    **Sugerencias**
+    **SUGERENCIAS:**
 
-    * María Jaramillo:
+    **Desktop:**
 
-        - Identificar si es select, input o botón; para que se pueda identificar.
-        
-    * José Florencio:
+    Nikol: (Jugadora de LOL)
+    -	Cambiar los colores de la página principal
+    -	Botón más resaltante.
+    -	En las flechas poner a que se refieren.
+    -	Poner tutorial en la primera pantalla.
+    -	Search Champions ser permanente en todas las pantallas.
 
-        - Imagen de fondo es adecuada, porque llama la atención y va acorde al juego.
+    Miguel López: (Jugador de LOL)
+    -	Le hizo fácil poder ingresar a cada vista que se le preguntó, de forma rápida.
 
-    * Angelo Casas:
+    Luis Veliz: (Principiante)
+    -	Que la pantalla de Tutorial sea fácil de encontrar.
 
-        - El diseño de la página debería tener características similares a la página oficial de League of Legends.
+    Angel Lozada Barreno (Jugador LOL)
+    -	En la pantalla de filtrado y ordenado agregar que se pueda desplegar (rol, ordenar y mana).
 
-    **Solución**
+    José Florencio:
+    - Imagen de fondo es adecuada, porque llama la atención va acorde al juego.
 
-    * María Jaramillo:
+    Angelo Casas:
+    - El diseño de la página debería tener características similares a la página oficial de League of Legends.
 
-        - Se añadió interacciones en Figma para un select, input o botón.
-        
+    **Mobile:**
 
-**Created by Kath & Nina**
+    Maria: (Jugadora de LOL)
+    -	El título de la página debe de ser más llamativo.
+    -	Cambiar el tipo de letra.
+    -	En las flechas poner a que se refieren.
+
+    Narda: (Principiante)
+    -	Que no sea muy cuadriculado.
+    -	Cambiar el contraste del botón de Submit.
+
+    Nikol: (Jugadora de LOL)
+    -	Reducir los botones de arriba.
+    -	Poner slider para deslizar.
+    -	Botón que índice dónde empezar la página.
+    
+    Angel Lozada Barreno (Jugador LOL)
+    -	En la pantalla de filtrado y ordenado agregar que se pueda desplegar (rol, ordenar y mana).
+    -	Fue fácil poder realizar lo que se pedía.
+    Christian Alarcon Bustamante: (Jugador de LOL)
+    -	El diseño está relativamente bien, entendible para cualquier jugador promedio.
+
+    Miguel A. (Principiante):
+    -	Hacer un diseño en español para los usuarios que no saben inglés.
+
+    **SOLUCIÓN:**
+
+    **Desktop:**
+
+    Pantalla Inicio:
+    -	Cambiar los colores de la página principal (Nikol)
+    -	Botón de Go To Champions que sea más resaltante. (Nikol)
+    -	En la flecha de abajo poner a donde se dirige (Nikol)
+
+    *Se cambió el color del botón Go To Champions y se añadió una descripción a la flecha de se encontraba en la parte inferior.*
+
+    Pantalla tutorial:
+    -	Botón de Go To Champions que sea más resaltante. (Nikol)
+    -	Que la información de ésta pantalla vaya al principio. (Nikol)
+    -	Que la pantalla de Tutorial sea fácil de encontrar. (Luis Veliz)
+
+    *Se cambió el color del botón Go To Champions.*
+
+    Pantalla de campeones:    
+    -	Search Champions ser permanente en todas las pantallas. (Nikol)
+
+    Pantalla de Filtrado y ordenado:
+    -	En la pantalla de filtrado y ordenado agregar que se pueda desplegar (rol, ordenar y mana) (Angel Lozada)
+
+    *Se añadió una imagen de scroll al costado de las imágenes simulando el desplazamiento de la pantalla.*
+
+    Pantalla de Información del Campeón.
+
+    Pantalla de Contacto.
+
+    **Mobile**
+
+    Que no sea muy cuadriculado. (Narda)
+
+    Hacer un diseño en español para los usuarios que no saben inglés. (Miguel A.)
+
+    Pantalla Inicio:
+    -	El título de la página debe de ser más llamativo. (Maria)
+    -	Cambiar el tipo de letra. (Maria)
+    -	En las flechas poner a que se refieren. (Maria)
+    -	Reducir los botones de arriba. (Nikol)
+    -	Botón que indique dónde empezar la página. (Nikol)
+
+    *Se cambió el color del título de la página, el tipo de letra. Además se añadió una pequeña descripción a la flecha y se redujo de tamaño al menú principal.*
+
+    Pantalla tutorial.
+
+    Pantalla de campeones:
+    -	Poner slider para deslizar. (Nikol)
+
+    *Se añadió una imagen de scroll al costado de las imágenes simulando el desplazamiento de la pantalla.*
+
+    Pantalla de Filtrado y ordenado:
+    -	Poner slider para deslizar. (Nikol)
+    -	En la pantalla de filtrado y ordenado agregar que se pueda desplegar (rol, ordenar y mana)(Nikol).
+
+    *Se añadió una imagen de scroll al costado de las imágenes simulando el desplazamiento de la pantalla. Al momento de hacer clic en rol y ordenar, se podrá visualizar las opciones que tiene cada una de estas.*
+
+    Pantalla de Información del Campeón:
+    -	En las flechas poner a que se refieren. (Maria)
+    -	Poner slider para deslizar. (Nikol)
+
+    *Se añadió una pequeña descripción a la flecha.*
+
+    Pantalla de Contacto:
+    -	Cambiar el contraste del botón de Submit. (Narda)
+
+    *Se cambió de diseño el botón Submit para hacerlo más vistoso.*
+
+6. Nuevo Portotipo de Alta Fidelidad:
+
+    **DESKTOP**
+
+    * Pantalla de Inicio
+
+    ![Pantalla de inicio](https://user-images.githubusercontent.com/47750982/55935778-1b54ba80-5bfa-11e9-8a95-6a59960b642c.jpg)
+
+    * Pantalla Tutorial
+
+    ![Pantalla de tutorial](https://user-images.githubusercontent.com/47750982/55935865-44754b00-5bfa-11e9-831a-a25419282313.jpg)
+
+    * Pantalla de Campeones
+
+    ![Pantalla de campeones](https://user-images.githubusercontent.com/47750982/55935919-679ffa80-5bfa-11e9-8832-e5d93580030f.jpg)
+
+    * Información de Campeones
+
+    ![Aatrox](https://user-images.githubusercontent.com/47750982/55935970-8bfbd700-5bfa-11e9-83bf-2924358dd213.jpg)
+
+    * Pantalla de Filtrado y Ordenado
+
+    ![Pantalla de Filtrado y Ordenado](https://user-images.githubusercontent.com/47750982/55936018-ae8df000-5bfa-11e9-9ef3-043972d13d1f.jpg)
+
+    * Pantalla de Contacto
+
+    ![Contacto](https://user-images.githubusercontent.com/47750982/55936055-cc5b5500-5bfa-11e9-86d7-149d016cf97f.jpg)
+
+    **Link en Figma** --> [Figma](https://www.figma.com/proto/aq7HMDvxBHbFXkyyWGrwI6/League-of-Legends-(Desktop)?node-id=0%3A1&scaling=scale-down)
+
+    **MOBILE**
+
+    * Pantalla de Inicio
+
+    ![Pantalla de bienvenida](https://user-images.githubusercontent.com/47750982/55936132-088eb580-5bfb-11e9-9151-b4d8b08845db.png)
+
+    * Pantalla Tutorial
+
+    ![Pantalla Tutorial](https://user-images.githubusercontent.com/47750982/55936166-21976680-5bfb-11e9-80fb-3591afab6c30.png)
+
+    * Pantalla de Campeones
+
+    ![Pantalla de campeones](https://user-images.githubusercontent.com/47750982/55936193-38d65400-5bfb-11e9-93f5-3f5b06990c32.png)
+
+    * Información de Campeones
+
+    ![Aatrox](https://user-images.githubusercontent.com/47750982/55936858-1a715800-5bfd-11e9-9574-59fe93e97baa.png)
+    ![Aatrox Estadísticas](https://user-images.githubusercontent.com/47750982/55936892-3674f980-5bfd-11e9-946e-3af5f5012225.png)
+
+    * Pantalla de Filtrado y Ordenado
+
+    ![Filtrado y Ordenado](https://user-images.githubusercontent.com/47750982/55936935-53a9c800-5bfd-11e9-878f-07b8e6c50d1b.png)
+
+    * Pantalla de Contacto
+
+    ![Contacto](https://user-images.githubusercontent.com/47750982/55936975-6cb27900-5bfd-11e9-83ab-6efda6ae7344.png)
+
+    **Link en Figma** --> [Figma](https://www.figma.com/proto/JBRAnOufjoEuHaYDlroCTHBZ/League-of-Legends-(Mobile)?node-id=0%3A1&scaling=scale-down)
+
+ **Link en Zeplin** --> [Zeplin](https://app.zeplin.io/project/5c98023d9663d72519aa3a3c/dashboard)
+
+
+
+**Created by Ninoska Lidia Vivas Rivas**
